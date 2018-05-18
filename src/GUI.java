@@ -45,6 +45,32 @@ public class GUI extends javax.swing.JFrame {
         OpenQuizLabel = new javax.swing.JLabel();
         HomeButLabel = new javax.swing.JLabel();
         MainMenuBack1 = new javax.swing.JLabel();
+        MainContentPanel = new javax.swing.JPanel();
+        QuizPanelM = new javax.swing.JPanel();
+        QuizIconM1 = new javax.swing.JLabel();
+        QuizStartM1 = new javax.swing.JLabel();
+        QuizPanelM2 = new javax.swing.JPanel();
+        QuizStartM2 = new javax.swing.JLabel();
+        QuizIconM2 = new javax.swing.JLabel();
+        QuizPanelM3 = new javax.swing.JPanel();
+        QuizStartM3 = new javax.swing.JLabel();
+        QuizIconM3 = new javax.swing.JLabel();
+        QuizPanelM4 = new javax.swing.JPanel();
+        QuizStartM4 = new javax.swing.JLabel();
+        QuizIconM4 = new javax.swing.JLabel();
+        QuizPanelM5 = new javax.swing.JPanel();
+        QuizStartM5 = new javax.swing.JLabel();
+        QuizIconM5 = new javax.swing.JLabel();
+        QuizPanelM6 = new javax.swing.JPanel();
+        QuizStartM6 = new javax.swing.JLabel();
+        QuizIconM6 = new javax.swing.JLabel();
+        QuizPanelM7 = new javax.swing.JPanel();
+        QuizStartM7 = new javax.swing.JLabel();
+        QuizIconM7 = new javax.swing.JLabel();
+        QuizPanelM8 = new javax.swing.JPanel();
+        QuizIconM8 = new javax.swing.JLabel();
+        QuizStartM8 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         MainBackground1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -154,7 +180,311 @@ public class GUI extends javax.swing.JFrame {
         MainMenuBack1.setPreferredSize(new java.awt.Dimension(1920, 40));
         MainMenuPanel.add(MainMenuBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 40));
 
-        MainBackground1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MainBackground_1.png"))); // NOI18N
+        MainContentPanel.setBackground(new java.awt.Color(255, 255, 255));
+        MainContentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        QuizPanelM.setBackground(new java.awt.Color(255, 255, 255));
+        QuizPanelM.setPreferredSize(new java.awt.Dimension(292, 292));
+
+        QuizStartM1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizStartM1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizStartDef.png"))); // NOI18N
+        QuizStartM1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                QuizStartM1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                QuizStartM1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                QuizStartM1MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                QuizStartM1MouseReleased(evt);
+            }
+        });
+
+        javax.swing.GroupLayout QuizPanelMLayout = new javax.swing.GroupLayout(QuizPanelM);
+        QuizPanelM.setLayout(QuizPanelMLayout);
+        QuizPanelMLayout.setHorizontalGroup(
+            QuizPanelMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(QuizIconM1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(QuizStartM1, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+        );
+        QuizPanelMLayout.setVerticalGroup(
+            QuizPanelMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuizPanelMLayout.createSequentialGroup()
+                .addComponent(QuizIconM1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(QuizStartM1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        MainContentPanel.add(QuizPanelM, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
+
+        QuizPanelM2.setBackground(new java.awt.Color(255, 255, 255));
+        QuizPanelM2.setPreferredSize(new java.awt.Dimension(292, 292));
+
+        QuizStartM2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizStartM2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizStartDef.png"))); // NOI18N
+        QuizStartM2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                QuizStartM2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                QuizStartM2MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                QuizStartM2MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                QuizStartM2MouseReleased(evt);
+            }
+        });
+
+        javax.swing.GroupLayout QuizPanelM2Layout = new javax.swing.GroupLayout(QuizPanelM2);
+        QuizPanelM2.setLayout(QuizPanelM2Layout);
+        QuizPanelM2Layout.setHorizontalGroup(
+            QuizPanelM2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(QuizIconM2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(QuizStartM2, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+        );
+        QuizPanelM2Layout.setVerticalGroup(
+            QuizPanelM2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuizPanelM2Layout.createSequentialGroup()
+                .addComponent(QuizIconM2, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(QuizStartM2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        MainContentPanel.add(QuizPanelM2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, -1, -1));
+
+        QuizPanelM3.setBackground(new java.awt.Color(255, 255, 255));
+        QuizPanelM3.setPreferredSize(new java.awt.Dimension(292, 292));
+
+        QuizStartM3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizStartM3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizStartDef.png"))); // NOI18N
+        QuizStartM3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                QuizStartM3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                QuizStartM3MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                QuizStartM3MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                QuizStartM3MouseReleased(evt);
+            }
+        });
+
+        javax.swing.GroupLayout QuizPanelM3Layout = new javax.swing.GroupLayout(QuizPanelM3);
+        QuizPanelM3.setLayout(QuizPanelM3Layout);
+        QuizPanelM3Layout.setHorizontalGroup(
+            QuizPanelM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(QuizIconM3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(QuizStartM3, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+        );
+        QuizPanelM3Layout.setVerticalGroup(
+            QuizPanelM3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuizPanelM3Layout.createSequentialGroup()
+                .addComponent(QuizIconM3, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(QuizStartM3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        MainContentPanel.add(QuizPanelM3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 100, -1, -1));
+
+        QuizPanelM4.setBackground(new java.awt.Color(255, 255, 255));
+        QuizPanelM4.setPreferredSize(new java.awt.Dimension(292, 292));
+
+        QuizStartM4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizStartM4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizStartDef.png"))); // NOI18N
+        QuizStartM4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                QuizStartM4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                QuizStartM4MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                QuizStartM4MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                QuizStartM4MouseReleased(evt);
+            }
+        });
+
+        javax.swing.GroupLayout QuizPanelM4Layout = new javax.swing.GroupLayout(QuizPanelM4);
+        QuizPanelM4.setLayout(QuizPanelM4Layout);
+        QuizPanelM4Layout.setHorizontalGroup(
+            QuizPanelM4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(QuizIconM4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(QuizStartM4, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+        );
+        QuizPanelM4Layout.setVerticalGroup(
+            QuizPanelM4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuizPanelM4Layout.createSequentialGroup()
+                .addComponent(QuizIconM4, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(QuizStartM4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        MainContentPanel.add(QuizPanelM4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 100, -1, -1));
+
+        QuizPanelM5.setBackground(new java.awt.Color(255, 255, 255));
+        QuizPanelM5.setPreferredSize(new java.awt.Dimension(292, 292));
+
+        QuizStartM5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizStartM5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizStartDef.png"))); // NOI18N
+        QuizStartM5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                QuizStartM5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                QuizStartM5MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                QuizStartM5MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                QuizStartM5MouseReleased(evt);
+            }
+        });
+
+        javax.swing.GroupLayout QuizPanelM5Layout = new javax.swing.GroupLayout(QuizPanelM5);
+        QuizPanelM5.setLayout(QuizPanelM5Layout);
+        QuizPanelM5Layout.setHorizontalGroup(
+            QuizPanelM5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(QuizIconM5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(QuizStartM5, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+        );
+        QuizPanelM5Layout.setVerticalGroup(
+            QuizPanelM5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuizPanelM5Layout.createSequentialGroup()
+                .addComponent(QuizIconM5, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(QuizStartM5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        MainContentPanel.add(QuizPanelM5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, -1, -1));
+
+        QuizPanelM6.setBackground(new java.awt.Color(255, 255, 255));
+        QuizPanelM6.setPreferredSize(new java.awt.Dimension(292, 292));
+
+        QuizStartM6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizStartM6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizStartDef.png"))); // NOI18N
+        QuizStartM6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                QuizStartM6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                QuizStartM6MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                QuizStartM6MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                QuizStartM6MouseReleased(evt);
+            }
+        });
+
+        javax.swing.GroupLayout QuizPanelM6Layout = new javax.swing.GroupLayout(QuizPanelM6);
+        QuizPanelM6.setLayout(QuizPanelM6Layout);
+        QuizPanelM6Layout.setHorizontalGroup(
+            QuizPanelM6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(QuizIconM6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(QuizStartM6, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+        );
+        QuizPanelM6Layout.setVerticalGroup(
+            QuizPanelM6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuizPanelM6Layout.createSequentialGroup()
+                .addComponent(QuizIconM6, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(QuizStartM6, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        MainContentPanel.add(QuizPanelM6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, -1, -1));
+
+        QuizPanelM7.setBackground(new java.awt.Color(255, 255, 255));
+        QuizPanelM7.setPreferredSize(new java.awt.Dimension(292, 292));
+
+        QuizStartM7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizStartM7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizStartDef.png"))); // NOI18N
+        QuizStartM7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                QuizStartM7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                QuizStartM7MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                QuizStartM7MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                QuizStartM7MouseReleased(evt);
+            }
+        });
+
+        javax.swing.GroupLayout QuizPanelM7Layout = new javax.swing.GroupLayout(QuizPanelM7);
+        QuizPanelM7.setLayout(QuizPanelM7Layout);
+        QuizPanelM7Layout.setHorizontalGroup(
+            QuizPanelM7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(QuizIconM7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(QuizStartM7, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+        );
+        QuizPanelM7Layout.setVerticalGroup(
+            QuizPanelM7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuizPanelM7Layout.createSequentialGroup()
+                .addComponent(QuizIconM7, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(QuizStartM7, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        MainContentPanel.add(QuizPanelM7, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 420, -1, -1));
+
+        QuizPanelM8.setBackground(new java.awt.Color(255, 255, 255));
+        QuizPanelM8.setPreferredSize(new java.awt.Dimension(292, 292));
+
+        QuizStartM8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizStartM8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizStartDef.png"))); // NOI18N
+        QuizStartM8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                QuizStartM8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                QuizStartM8MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                QuizStartM8MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                QuizStartM8MouseReleased(evt);
+            }
+        });
+
+        javax.swing.GroupLayout QuizPanelM8Layout = new javax.swing.GroupLayout(QuizPanelM8);
+        QuizPanelM8.setLayout(QuizPanelM8Layout);
+        QuizPanelM8Layout.setHorizontalGroup(
+            QuizPanelM8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(QuizIconM8, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+            .addComponent(QuizStartM8, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+        );
+        QuizPanelM8Layout.setVerticalGroup(
+            QuizPanelM8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuizPanelM8Layout.createSequentialGroup()
+                .addComponent(QuizIconM8, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(QuizStartM8, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        MainContentPanel.add(QuizPanelM8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 420, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MainBackgroud2.png"))); // NOI18N
+        MainContentPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 810));
+
+        MainMenuPanel.add(MainContentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 1420, 810));
+
+        MainBackground1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MainBackgroud2.png"))); // NOI18N
         MainMenuPanel.add(MainBackground1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 850));
 
         jLayeredPane1.add(MainMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -243,6 +573,198 @@ public class GUI extends javax.swing.JFrame {
     System.exit(0);
     }//GEN-LAST:event_QuitButLabelMouseClicked
 
+    private void QuizStartM1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM1MouseEntered
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM1.setIcon(IIreg);       
+    }//GEN-LAST:event_QuizStartM1MouseEntered
+
+    private void QuizStartM1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM1MouseExited
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartDef.png"));
+    QuizStartM1.setIcon(IIreg); 
+    }//GEN-LAST:event_QuizStartM1MouseExited
+
+    private void QuizStartM1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM1MousePressed
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartClick.png"));
+    QuizStartM1.setIcon(IIreg); 
+    }//GEN-LAST:event_QuizStartM1MousePressed
+
+    private void QuizStartM1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM1MouseReleased
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM1.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM1MouseReleased
+
+    private void QuizStartM2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM2MouseEntered
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM2.setIcon(IIreg); 
+    }//GEN-LAST:event_QuizStartM2MouseEntered
+
+    private void QuizStartM2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM2MouseExited
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartDef.png"));
+    QuizStartM2.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM2MouseExited
+
+    private void QuizStartM2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM2MousePressed
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartClick.png"));
+    QuizStartM2.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM2MousePressed
+
+    private void QuizStartM2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM2MouseReleased
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM2.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM2MouseReleased
+
+    private void QuizStartM3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM3MouseEntered
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM2.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM3MouseEntered
+
+    private void QuizStartM3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM3MouseExited
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartDef.png"));
+    QuizStartM3.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM3MouseExited
+
+    private void QuizStartM3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM3MousePressed
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartClick.png"));
+    QuizStartM3.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM3MousePressed
+
+    private void QuizStartM3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM3MouseReleased
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM3.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM3MouseReleased
+
+    private void QuizStartM4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM4MouseEntered
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM4.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM4MouseEntered
+
+    private void QuizStartM4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM4MouseExited
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartDef.png"));
+    QuizStartM4.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM4MouseExited
+
+    private void QuizStartM4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM4MousePressed
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartClick.png"));
+    QuizStartM4.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM4MousePressed
+
+    private void QuizStartM4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM4MouseReleased
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM4.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM4MouseReleased
+
+    private void QuizStartM5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM5MouseEntered
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM5.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM5MouseEntered
+
+    private void QuizStartM5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM5MouseExited
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartDef.png"));
+    QuizStartM5.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM5MouseExited
+
+    private void QuizStartM5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM5MousePressed
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartClick.png"));
+    QuizStartM5.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM5MousePressed
+
+    private void QuizStartM5MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM5MouseReleased
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM5.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM5MouseReleased
+
+    private void QuizStartM6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM6MouseEntered
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM6.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM6MouseEntered
+
+    private void QuizStartM6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM6MouseExited
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartDef.png"));
+    QuizStartM6.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM6MouseExited
+
+    private void QuizStartM6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM6MousePressed
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartClick.png"));
+    QuizStartM6.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM6MousePressed
+
+    private void QuizStartM6MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM6MouseReleased
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM6.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM6MouseReleased
+
+    private void QuizStartM7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM7MouseEntered
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM7.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM7MouseEntered
+
+    private void QuizStartM7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM7MouseExited
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartDef.png"));
+    QuizStartM7.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM7MouseExited
+
+    private void QuizStartM7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM7MousePressed
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartClick.png"));
+    QuizStartM7.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM7MousePressed
+
+    private void QuizStartM7MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM7MouseReleased
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM7.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM7MouseReleased
+
+    private void QuizStartM8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM8MouseEntered
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM8.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM8MouseEntered
+
+    private void QuizStartM8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM8MouseExited
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartDef.png"));
+    QuizStartM8.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM8MouseExited
+
+    private void QuizStartM8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM8MousePressed
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartClick.png"));
+    QuizStartM8.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM8MousePressed
+
+    private void QuizStartM8MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM8MouseReleased
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
+    QuizStartM8.setIcon(IIreg);
+    }//GEN-LAST:event_QuizStartM8MouseReleased
+
     /**
      * @param args the command line arguments
      */
@@ -282,14 +804,40 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel HomeButLabel;
     private javax.swing.JLabel MainBackground;
     private javax.swing.JLabel MainBackground1;
+    private javax.swing.JPanel MainContentPanel;
     private javax.swing.JLabel MainMenuBack;
     private javax.swing.JLabel MainMenuBack1;
     private javax.swing.JPanel MainMenuPanel;
     private javax.swing.JLabel MakeQuizLabel;
     private javax.swing.JLabel OpenQuizLabel;
     private javax.swing.JLabel QuitButLabel;
+    private javax.swing.JLabel QuizIconM1;
+    private javax.swing.JLabel QuizIconM2;
+    private javax.swing.JLabel QuizIconM3;
+    private javax.swing.JLabel QuizIconM4;
+    private javax.swing.JLabel QuizIconM5;
+    private javax.swing.JLabel QuizIconM6;
+    private javax.swing.JLabel QuizIconM7;
+    private javax.swing.JLabel QuizIconM8;
+    private javax.swing.JPanel QuizPanelM;
+    private javax.swing.JPanel QuizPanelM2;
+    private javax.swing.JPanel QuizPanelM3;
+    private javax.swing.JPanel QuizPanelM4;
+    private javax.swing.JPanel QuizPanelM5;
+    private javax.swing.JPanel QuizPanelM6;
+    private javax.swing.JPanel QuizPanelM7;
+    private javax.swing.JPanel QuizPanelM8;
+    private javax.swing.JLabel QuizStartM1;
+    private javax.swing.JLabel QuizStartM2;
+    private javax.swing.JLabel QuizStartM3;
+    private javax.swing.JLabel QuizStartM4;
+    private javax.swing.JLabel QuizStartM5;
+    private javax.swing.JLabel QuizStartM6;
+    private javax.swing.JLabel QuizStartM7;
+    private javax.swing.JLabel QuizStartM8;
     private javax.swing.JLabel StartBut;
     private javax.swing.JPanel StartMenuPanel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
