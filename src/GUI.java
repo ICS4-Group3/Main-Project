@@ -186,6 +186,10 @@ public class GUI extends javax.swing.JFrame {
         QuizPanelM.setBackground(new java.awt.Color(255, 255, 255));
         QuizPanelM.setPreferredSize(new java.awt.Dimension(292, 292));
 
+        QuizIconM1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizIconM1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizIconType1.png"))); // NOI18N
+        QuizIconM1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
         QuizStartM1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         QuizStartM1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizStartDef.png"))); // NOI18N
         QuizStartM1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -207,14 +211,14 @@ public class GUI extends javax.swing.JFrame {
         QuizPanelM.setLayout(QuizPanelMLayout);
         QuizPanelMLayout.setHorizontalGroup(
             QuizPanelMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(QuizIconM1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(QuizStartM1, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+            .addComponent(QuizIconM1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         QuizPanelMLayout.setVerticalGroup(
             QuizPanelMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(QuizPanelMLayout.createSequentialGroup()
-                .addComponent(QuizIconM1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
+                .addComponent(QuizIconM1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
                 .addComponent(QuizStartM1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
