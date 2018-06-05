@@ -75,6 +75,12 @@ public class GUI extends javax.swing.JFrame {
         MainBackground1 = new javax.swing.JLabel();
         QuizPanelMain = new javax.swing.JPanel();
         ExitQuizBut = new javax.swing.JLabel();
+        MainQuizDisp = new javax.swing.JPanel();
+        QuestionDisp = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        QuizInputPanel = new javax.swing.JPanel();
+        MultiChoiceDisp = new javax.swing.JPanel();
+        MultiChoiceDisp1 = new javax.swing.JPanel();
         QuitButLabel2 = new javax.swing.JLabel();
         MainMenuBack3 = new javax.swing.JLabel();
         MainBackground2 = new javax.swing.JLabel();
@@ -519,6 +525,95 @@ public class GUI extends javax.swing.JFrame {
         });
         QuizPanelMain.add(ExitQuizBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 0, 200, 60));
 
+        MainQuizDisp.setBackground(new java.awt.Color(255, 255, 255));
+        MainQuizDisp.setForeground(new java.awt.Color(255, 255, 255));
+
+        QuestionDisp.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel2.setFont(new java.awt.Font("Source Sans Pro Semibold", 0, 24)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("[Insert Question Here]");
+
+        javax.swing.GroupLayout QuestionDispLayout = new javax.swing.GroupLayout(QuestionDisp);
+        QuestionDisp.setLayout(QuestionDispLayout);
+        QuestionDispLayout.setHorizontalGroup(
+            QuestionDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        QuestionDispLayout.setVerticalGroup(
+            QuestionDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuestionDispLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        QuizInputPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        MultiChoiceDisp.setBackground(new java.awt.Color(255, 255, 255));
+        MultiChoiceDisp.setPreferredSize(new java.awt.Dimension(710, 516));
+
+        MultiChoiceDisp1.setBackground(new java.awt.Color(255, 255, 255));
+        MultiChoiceDisp1.setPreferredSize(new java.awt.Dimension(710, 516));
+
+        javax.swing.GroupLayout MultiChoiceDisp1Layout = new javax.swing.GroupLayout(MultiChoiceDisp1);
+        MultiChoiceDisp1.setLayout(MultiChoiceDisp1Layout);
+        MultiChoiceDisp1Layout.setHorizontalGroup(
+            MultiChoiceDisp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 710, Short.MAX_VALUE)
+        );
+        MultiChoiceDisp1Layout.setVerticalGroup(
+            MultiChoiceDisp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 516, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout MultiChoiceDispLayout = new javax.swing.GroupLayout(MultiChoiceDisp);
+        MultiChoiceDisp.setLayout(MultiChoiceDispLayout);
+        MultiChoiceDispLayout.setHorizontalGroup(
+            MultiChoiceDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MultiChoiceDispLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(MultiChoiceDisp1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(354, 354, 354))
+        );
+        MultiChoiceDispLayout.setVerticalGroup(
+            MultiChoiceDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(MultiChoiceDisp1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout QuizInputPanelLayout = new javax.swing.GroupLayout(QuizInputPanel);
+        QuizInputPanel.setLayout(QuizInputPanelLayout);
+        QuizInputPanelLayout.setHorizontalGroup(
+            QuizInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, QuizInputPanelLayout.createSequentialGroup()
+                .addContainerGap(356, Short.MAX_VALUE)
+                .addComponent(MultiChoiceDisp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(354, 354, 354))
+        );
+        QuizInputPanelLayout.setVerticalGroup(
+            QuizInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(MultiChoiceDisp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout MainQuizDispLayout = new javax.swing.GroupLayout(MainQuizDisp);
+        MainQuizDisp.setLayout(MainQuizDispLayout);
+        MainQuizDispLayout.setHorizontalGroup(
+            MainQuizDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(QuestionDisp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(QuizInputPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        MainQuizDispLayout.setVerticalGroup(
+            MainQuizDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MainQuizDispLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(QuestionDisp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(QuizInputPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+
+        QuizPanelMain.add(MainQuizDisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1420, 790));
+
         QuitButLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         QuitButLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuitButDef.png"))); // NOI18N
         QuitButLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -914,8 +1009,12 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel MainMenuBack1;
     private javax.swing.JLabel MainMenuBack3;
     private javax.swing.JPanel MainMenuPanel;
+    private javax.swing.JPanel MainQuizDisp;
     private javax.swing.JLabel MakeQuizLabel;
+    private javax.swing.JPanel MultiChoiceDisp;
+    private javax.swing.JPanel MultiChoiceDisp1;
     private javax.swing.JLabel OpenQuizLabel;
+    private javax.swing.JPanel QuestionDisp;
     private javax.swing.JLabel QuitButLabel;
     private javax.swing.JLabel QuitButLabel2;
     private javax.swing.JLabel QuizIconM1;
@@ -926,6 +1025,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel QuizIconM6;
     private javax.swing.JLabel QuizIconM7;
     private javax.swing.JLabel QuizIconM8;
+    private javax.swing.JPanel QuizInputPanel;
     private javax.swing.JPanel QuizPanelM;
     private javax.swing.JPanel QuizPanelM2;
     private javax.swing.JPanel QuizPanelM3;
@@ -946,6 +1046,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel StartBut;
     private javax.swing.JPanel StartMenuPanel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
