@@ -14,9 +14,9 @@ import javax.swing.ImageIcon;
  */
 public class GUI extends javax.swing.JFrame {
 
-    /**
-     * Creates new form GUI
-     */
+String QuizName1 = "Placeholder Name1";
+String QuizName2 = "Placeholder Name2";
+
     public GUI() {
         initComponents();
         //Hides all other panels to avoid bugs exept start
@@ -46,6 +46,7 @@ public class GUI extends javax.swing.JFrame {
         OpenQuizLabel = new javax.swing.JLabel();
         HomeButLabel = new javax.swing.JLabel();
         MainMenuBack1 = new javax.swing.JLabel();
+        BlueLineBottom = new javax.swing.JLabel();
         MainContentPanel = new javax.swing.JPanel();
         QuizPanelM = new javax.swing.JPanel();
         QuizIconM1 = new javax.swing.JLabel();
@@ -71,19 +72,24 @@ public class GUI extends javax.swing.JFrame {
         QuizPanelM8 = new javax.swing.JPanel();
         QuizIconM8 = new javax.swing.JLabel();
         QuizStartM8 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         MainBackground1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         QuizPanelMain = new javax.swing.JPanel();
         ExitQuizBut = new javax.swing.JLabel();
         MainQuizDisp = new javax.swing.JPanel();
         QuestionDisp = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        QuizNameLabel = new javax.swing.JLabel();
         QuizInputPanel = new javax.swing.JPanel();
         MultiChoiceDisp = new javax.swing.JPanel();
         MultiChoiceDisp1 = new javax.swing.JPanel();
         QuitButLabel2 = new javax.swing.JLabel();
         MainMenuBack3 = new javax.swing.JLabel();
         MainBackground2 = new javax.swing.JLabel();
+        MakeQuizMain = new javax.swing.JPanel();
+        ExitQuizBut2 = new javax.swing.JLabel();
+        QuitButLabel3 = new javax.swing.JLabel();
+        MainMenuBack4 = new javax.swing.JLabel();
+        MainBackground3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -153,11 +159,17 @@ public class GUI extends javax.swing.JFrame {
         MakeQuizLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MakeQuizButDef.png"))); // NOI18N
         MakeQuizLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         MakeQuizLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MakeQuizLabelMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 MakeQuizLabelMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 MakeQuizLabelMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                MakeQuizLabelMousePressed(evt);
             }
         });
         MainMenuPanel.add(MakeQuizLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 180, 50));
@@ -166,6 +178,9 @@ public class GUI extends javax.swing.JFrame {
         OpenQuizLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/OpenQuizButDef.png"))); // NOI18N
         OpenQuizLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         OpenQuizLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OpenQuizLabelMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 OpenQuizLabelMouseEntered(evt);
             }
@@ -191,6 +206,10 @@ public class GUI extends javax.swing.JFrame {
         MainMenuBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MenuBackground1.png"))); // NOI18N
         MainMenuBack1.setPreferredSize(new java.awt.Dimension(1920, 40));
         MainMenuPanel.add(MainMenuBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 40));
+
+        BlueLineBottom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MenuBackground1.png"))); // NOI18N
+        BlueLineBottom.setPreferredSize(new java.awt.Dimension(1920, 40));
+        MainMenuPanel.add(BlueLineBottom, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 840, 1420, 10));
 
         MainContentPanel.setBackground(new java.awt.Color(255, 255, 255));
         MainContentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -256,12 +275,16 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        QuizIconM2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizIconM2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizIconType2.png"))); // NOI18N
+        QuizIconM2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
         javax.swing.GroupLayout QuizPanelM2Layout = new javax.swing.GroupLayout(QuizPanelM2);
         QuizPanelM2.setLayout(QuizPanelM2Layout);
         QuizPanelM2Layout.setHorizontalGroup(
             QuizPanelM2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(QuizIconM2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(QuizStartM2, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+            .addComponent(QuizStartM2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         QuizPanelM2Layout.setVerticalGroup(
             QuizPanelM2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -495,13 +518,13 @@ public class GUI extends javax.swing.JFrame {
 
         MainContentPanel.add(QuizPanelM8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 420, -1, -1));
 
+        MainBackground1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MainBackgroud2.png"))); // NOI18N
+        MainContentPanel.add(MainBackground1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 850));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MainBackgroud2.png"))); // NOI18N
         MainContentPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 810));
 
         MainMenuPanel.add(MainContentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 1420, 810));
-
-        MainBackground1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MainBackgroud2.png"))); // NOI18N
-        MainMenuPanel.add(MainBackground1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 850));
 
         jLayeredPane1.add(MainMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -530,22 +553,22 @@ public class GUI extends javax.swing.JFrame {
 
         QuestionDisp.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setFont(new java.awt.Font("Source Sans Pro Semibold", 0, 24)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("[Insert Question Here]");
+        QuizNameLabel.setFont(new java.awt.Font("Source Sans Pro Semibold", 0, 24)); // NOI18N
+        QuizNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizNameLabel.setText("[Insert Quiz Name Here]");
 
         javax.swing.GroupLayout QuestionDispLayout = new javax.swing.GroupLayout(QuestionDisp);
         QuestionDisp.setLayout(QuestionDispLayout);
         QuestionDispLayout.setHorizontalGroup(
             QuestionDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(QuizNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         QuestionDispLayout.setVerticalGroup(
             QuestionDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(QuestionDispLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(QuizNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         QuizInputPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -639,6 +662,51 @@ public class GUI extends javax.swing.JFrame {
 
         jLayeredPane1.add(QuizPanelMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        MakeQuizMain.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ExitQuizBut2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ExitButDef.png"))); // NOI18N
+        ExitQuizBut2.setPreferredSize(new java.awt.Dimension(1920, 40));
+        ExitQuizBut2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ExitQuizBut2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ExitQuizBut2MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                ExitQuizBut2MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                ExitQuizBut2MouseReleased(evt);
+            }
+        });
+        MakeQuizMain.add(ExitQuizBut2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 0, 200, 60));
+
+        QuitButLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuitButLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuitButDef.png"))); // NOI18N
+        QuitButLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        QuitButLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                QuitButLabel3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                QuitButLabel3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                QuitButLabel3MouseExited(evt);
+            }
+        });
+        MakeQuizMain.add(QuitButLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 0, 100, 50));
+
+        MainMenuBack4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MenuBackground1.png"))); // NOI18N
+        MainMenuBack4.setPreferredSize(new java.awt.Dimension(1920, 40));
+        MakeQuizMain.add(MainMenuBack4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 40));
+
+        MainBackground3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MainBackgroud2.png"))); // NOI18N
+        MakeQuizMain.add(MainBackground3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 850));
+
+        jLayeredPane1.add(MakeQuizMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         getContentPane().add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -666,8 +734,11 @@ public class GUI extends javax.swing.JFrame {
     //Changes label to reg state
     ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/StartButHov2.png"));
     StartBut.setIcon(IIreg);
-    MainMenuPanel.setVisible(true);
+    //Switches to main menu
+    MainMenuPanel.setVisible(false);
     StartMenuPanel.setVisible(false);
+    QuizPanelMain.setVisible(true);
+    MakeQuizMain.setVisible(false);
     }//GEN-LAST:event_StartButMouseReleased
 
     private void OpenQuizLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OpenQuizLabelMouseEntered
@@ -749,6 +820,9 @@ public class GUI extends javax.swing.JFrame {
     MainMenuPanel.setVisible(false);
     StartMenuPanel.setVisible(false);
     QuizPanelMain.setVisible(true);
+    MakeQuizMain.setVisible(false);
+//Sets quiz name in quiz panel
+    QuizNameLabel.setText(QuizName1);
     }//GEN-LAST:event_QuizStartM1MouseReleased
 
     private void QuizStartM2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM2MouseEntered
@@ -773,12 +847,19 @@ public class GUI extends javax.swing.JFrame {
 //Changes label to imagehovered
     ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
     QuizStartM2.setIcon(IIreg);
+//Switches to quiz panel
+    MainMenuPanel.setVisible(false);
+    StartMenuPanel.setVisible(false);
+    QuizPanelMain.setVisible(true);
+    MakeQuizMain.setVisible(false);
+//Sets quiz name in quiz panel
+    QuizNameLabel.setText(QuizName2);
     }//GEN-LAST:event_QuizStartM2MouseReleased
 
     private void QuizStartM3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM3MouseEntered
 //Changes label to imagehovered
     ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
-    QuizStartM2.setIcon(IIreg);
+    QuizStartM3.setIcon(IIreg);
     }//GEN-LAST:event_QuizStartM3MouseEntered
 
     private void QuizStartM3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM3MouseExited
@@ -963,6 +1044,58 @@ public class GUI extends javax.swing.JFrame {
     QuitButLabel2.setIcon(IIreg);
     }//GEN-LAST:event_QuitButLabel2MouseExited
 
+    private void ExitQuizBut2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitQuizBut2MouseEntered
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/ExitButHov.png"));
+    ExitQuizBut2.setIcon(IIreg); 
+    }//GEN-LAST:event_ExitQuizBut2MouseEntered
+
+    private void ExitQuizBut2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitQuizBut2MouseExited
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/ExitButDef.png"));
+    ExitQuizBut2.setIcon(IIreg); 
+    }//GEN-LAST:event_ExitQuizBut2MouseExited
+
+    private void ExitQuizBut2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitQuizBut2MousePressed
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/ExitButClick.png"));
+    ExitQuizBut2.setIcon(IIreg); 
+    }//GEN-LAST:event_ExitQuizBut2MousePressed
+
+    private void ExitQuizBut2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitQuizBut2MouseReleased
+//Changes label to imagehovered
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/ExitButHov.png"));
+    ExitQuizBut2.setIcon(IIreg); 
+    }//GEN-LAST:event_ExitQuizBut2MouseReleased
+
+    private void QuitButLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuitButLabel3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QuitButLabel3MouseClicked
+
+    private void QuitButLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuitButLabel3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QuitButLabel3MouseEntered
+
+    private void QuitButLabel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuitButLabel3MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QuitButLabel3MouseExited
+
+    private void OpenQuizLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OpenQuizLabelMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OpenQuizLabelMouseClicked
+
+    private void MakeQuizLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MakeQuizLabelMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MakeQuizLabelMousePressed
+
+    private void MakeQuizLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MakeQuizLabelMouseClicked
+//Switches to make quiz panel
+    MainMenuPanel.setVisible(false);
+    StartMenuPanel.setVisible(false);
+    QuizPanelMain.setVisible(false);
+    MakeQuizMain.setVisible(true);
+    }//GEN-LAST:event_MakeQuizLabelMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -999,24 +1132,30 @@ public class GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BlueLineBottom;
     private javax.swing.JLabel ExitQuizBut;
+    private javax.swing.JLabel ExitQuizBut2;
     private javax.swing.JLabel HomeButLabel;
     private javax.swing.JLabel MainBackground;
     private javax.swing.JLabel MainBackground1;
     private javax.swing.JLabel MainBackground2;
+    private javax.swing.JLabel MainBackground3;
     private javax.swing.JPanel MainContentPanel;
     private javax.swing.JLabel MainMenuBack;
     private javax.swing.JLabel MainMenuBack1;
     private javax.swing.JLabel MainMenuBack3;
+    private javax.swing.JLabel MainMenuBack4;
     private javax.swing.JPanel MainMenuPanel;
     private javax.swing.JPanel MainQuizDisp;
     private javax.swing.JLabel MakeQuizLabel;
+    private javax.swing.JPanel MakeQuizMain;
     private javax.swing.JPanel MultiChoiceDisp;
     private javax.swing.JPanel MultiChoiceDisp1;
     private javax.swing.JLabel OpenQuizLabel;
     private javax.swing.JPanel QuestionDisp;
     private javax.swing.JLabel QuitButLabel;
     private javax.swing.JLabel QuitButLabel2;
+    private javax.swing.JLabel QuitButLabel3;
     private javax.swing.JLabel QuizIconM1;
     private javax.swing.JLabel QuizIconM2;
     private javax.swing.JLabel QuizIconM3;
@@ -1026,6 +1165,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel QuizIconM7;
     private javax.swing.JLabel QuizIconM8;
     private javax.swing.JPanel QuizInputPanel;
+    private javax.swing.JLabel QuizNameLabel;
     private javax.swing.JPanel QuizPanelM;
     private javax.swing.JPanel QuizPanelM2;
     private javax.swing.JPanel QuizPanelM3;
@@ -1046,7 +1186,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel StartBut;
     private javax.swing.JPanel StartMenuPanel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
