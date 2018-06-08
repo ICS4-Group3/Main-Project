@@ -20,6 +20,17 @@ String QuizName6 = "Placeholder Name6";
 String QuizName7 = "Placeholder Name7";
 String QuizName8 = "Placeholder Name8";
 String FileName1;
+String Question1S;
+String Question2S;
+String Question3S;
+String Question4S;
+int AnswerMulti1 = 0;
+boolean Option1MultiB = false;
+boolean Option2MultiB = false;
+boolean Option3MultiB = false;
+boolean Option4MultiB = false;
+int Question1Line = 3;
+int QuestionType = 0;
 
 int LineNumber;
 private Scanner Scanner1;
@@ -55,6 +66,98 @@ private Scanner Scanner1;
     public void closeFile1() {
         //Closes this file scanner
         Scanner1.close();
+    }
+    public void readQuestion1M() throws IOException {
+        try {
+            Scanner1 = new Scanner(new File(System.getProperty("user.dir")+FileName1));
+        }
+        catch(Exception e){
+            System.out.println("File not found 2");
+        }
+        String readLine = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line-1);
+        if (readLine == "C1"){
+            MultiChoiceDisp.setVisible(true);
+            QuestionType = 1;
+        }
+        else if (readLine == "C2"){
+            
+            QuestionType = 2;            
+        }
+        else if (readLine == "C3"){
+            
+            QuestionType = 3;
+        }
+        String readLine1 = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line);
+        Question1S = readLine1;
+        QuestionLabelM.setText(Question1S);
+        
+        Scanner1.close();
+    }
+    
+    public void setQuestions1M() throws IOException {
+        
+    }
+
+    
+    public void Option1MultiM(){
+    ImageIcon Ireg = new ImageIcon(getClass().getResource("/Images/MultiChoiceClick.png"));
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"));
+    Option1Multi.setIcon(Ireg);
+    Option2Multi.setIcon(IIreg);
+    Option3Multi.setIcon(IIreg);
+    Option4Multi.setIcon(IIreg);
+    AnswerMulti1 = 1;
+    }
+    public void Option1RMultiM(){
+    ImageIcon Ireg = new ImageIcon(getClass().getResource("/Images/MultiChoiceClick.png"));
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"));
+    Option1Multi.setIcon(IIreg);
+    AnswerMulti1 = 0;
+    }
+    public void Option2MultiM(){
+    ImageIcon Ireg = new ImageIcon(getClass().getResource("/Images/MultiChoiceClick.png"));
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"));
+    Option1Multi.setIcon(IIreg);
+    Option2Multi.setIcon(Ireg);
+    Option3Multi.setIcon(IIreg);
+    Option4Multi.setIcon(IIreg);
+    AnswerMulti1 = 2;
+    }
+    public void Option2RMultiM(){
+    ImageIcon Ireg = new ImageIcon(getClass().getResource("/Images/MultiChoiceClick.png"));
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"));
+    Option2Multi.setIcon(IIreg);
+    AnswerMulti1 = 0;
+    }
+    public void Option3MultiM(){
+    ImageIcon Ireg = new ImageIcon(getClass().getResource("/Images/MultiChoiceClick.png"));
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"));
+    Option1Multi.setIcon(IIreg);
+    Option2Multi.setIcon(IIreg);
+    Option3Multi.setIcon(Ireg);
+    Option4Multi.setIcon(IIreg);
+    AnswerMulti1 = 3;
+    }
+    public void Option3RMultiM(){
+    ImageIcon Ireg = new ImageIcon(getClass().getResource("/Images/MultiChoiceClick.png"));
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"));
+    Option3Multi.setIcon(IIreg);
+    AnswerMulti1 = 0;
+    }
+    public void Option4MultiM(){
+    ImageIcon Ireg = new ImageIcon(getClass().getResource("/Images/MultiChoiceClick.png"));
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"));
+    Option1Multi.setIcon(IIreg);
+    Option2Multi.setIcon(IIreg);
+    Option3Multi.setIcon(IIreg);
+    Option4Multi.setIcon(Ireg);
+    AnswerMulti1 = 4;
+    }
+    public void Option4RMultiM(){
+    ImageIcon Ireg = new ImageIcon(getClass().getResource("/Images/MultiChoiceClick.png"));
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"));
+    Option4Multi.setIcon(IIreg);
+    AnswerMulti1 = 0;
     }
 
     public GUI() {
@@ -115,9 +218,14 @@ private Scanner Scanner1;
         MainQuizDisp = new javax.swing.JPanel();
         QuestionDisp = new javax.swing.JPanel();
         QuizNameLabel = new javax.swing.JLabel();
+        QuestionLabelM = new javax.swing.JLabel();
         QuizInputPanel = new javax.swing.JPanel();
         MultiChoiceDisp = new javax.swing.JPanel();
         MultiChoiceDisp1 = new javax.swing.JPanel();
+        Option1Multi = new javax.swing.JLabel();
+        Option2Multi = new javax.swing.JLabel();
+        Option3Multi = new javax.swing.JLabel();
+        Option4Multi = new javax.swing.JLabel();
         QuitButLabel2 = new javax.swing.JLabel();
         MainMenuBack3 = new javax.swing.JLabel();
         MainBackground2 = new javax.swing.JLabel();
@@ -588,87 +696,130 @@ private Scanner Scanner1;
         MainQuizDisp.setForeground(new java.awt.Color(255, 255, 255));
 
         QuestionDisp.setBackground(new java.awt.Color(255, 255, 255));
+        QuestionDisp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         QuizNameLabel.setFont(new java.awt.Font("Source Sans Pro Semibold", 0, 24)); // NOI18N
         QuizNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         QuizNameLabel.setText("[Insert Quiz Name Here]");
+        QuestionDisp.add(QuizNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 75));
 
-        javax.swing.GroupLayout QuestionDispLayout = new javax.swing.GroupLayout(QuestionDisp);
-        QuestionDisp.setLayout(QuestionDispLayout);
-        QuestionDispLayout.setHorizontalGroup(
-            QuestionDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(QuizNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        QuestionDispLayout.setVerticalGroup(
-            QuestionDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(QuestionDispLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(QuizNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(83, Short.MAX_VALUE))
-        );
+        QuestionLabelM.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        QuestionLabelM.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuestionLabelM.setText("[Placeholder Question here]");
+        QuestionLabelM.setToolTipText("");
+        QuestionDisp.add(QuestionLabelM, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 81, 1420, 66));
 
         QuizInputPanel.setBackground(new java.awt.Color(255, 255, 255));
+        QuizInputPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         MultiChoiceDisp.setBackground(new java.awt.Color(255, 255, 255));
         MultiChoiceDisp.setPreferredSize(new java.awt.Dimension(710, 516));
+        MultiChoiceDisp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         MultiChoiceDisp1.setBackground(new java.awt.Color(255, 255, 255));
         MultiChoiceDisp1.setPreferredSize(new java.awt.Dimension(710, 516));
+
+        Option1Multi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"))); // NOI18N
+        Option1Multi.setText("          [Placeholder Questionhere]");
+        Option1Multi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Option1MultiMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Option1MultiMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Option1MultiMouseExited(evt);
+            }
+        });
+
+        Option2Multi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"))); // NOI18N
+        Option2Multi.setText("          [Placeholder Questionhere]");
+        Option2Multi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Option2MultiMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Option2MultiMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Option2MultiMouseExited(evt);
+            }
+        });
+
+        Option3Multi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"))); // NOI18N
+        Option3Multi.setText("          [Placeholder Questionhere]");
+        Option3Multi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Option3MultiMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Option3MultiMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Option3MultiMousePressed(evt);
+            }
+        });
+
+        Option4Multi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"))); // NOI18N
+        Option4Multi.setText("          [Placeholder Questionhere]");
+        Option4Multi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Option4MultiMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Option4MultiMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Option4MultiMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout MultiChoiceDisp1Layout = new javax.swing.GroupLayout(MultiChoiceDisp1);
         MultiChoiceDisp1.setLayout(MultiChoiceDisp1Layout);
         MultiChoiceDisp1Layout.setHorizontalGroup(
             MultiChoiceDisp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 710, Short.MAX_VALUE)
+            .addGroup(MultiChoiceDisp1Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(MultiChoiceDisp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Option4Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Option3Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Option2Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Option1Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         MultiChoiceDisp1Layout.setVerticalGroup(
             MultiChoiceDisp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 516, Short.MAX_VALUE)
+            .addGroup(MultiChoiceDisp1Layout.createSequentialGroup()
+                .addGap(102, 102, 102)
+                .addComponent(Option1Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Option2Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Option3Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Option4Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(215, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout MultiChoiceDispLayout = new javax.swing.GroupLayout(MultiChoiceDisp);
-        MultiChoiceDisp.setLayout(MultiChoiceDispLayout);
-        MultiChoiceDispLayout.setHorizontalGroup(
-            MultiChoiceDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MultiChoiceDispLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(MultiChoiceDisp1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(354, 354, 354))
-        );
-        MultiChoiceDispLayout.setVerticalGroup(
-            MultiChoiceDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MultiChoiceDisp1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        MultiChoiceDisp.add(MultiChoiceDisp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, 494));
 
-        javax.swing.GroupLayout QuizInputPanelLayout = new javax.swing.GroupLayout(QuizInputPanel);
-        QuizInputPanel.setLayout(QuizInputPanelLayout);
-        QuizInputPanelLayout.setHorizontalGroup(
-            QuizInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, QuizInputPanelLayout.createSequentialGroup()
-                .addContainerGap(356, Short.MAX_VALUE)
-                .addComponent(MultiChoiceDisp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(354, 354, 354))
-        );
-        QuizInputPanelLayout.setVerticalGroup(
-            QuizInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MultiChoiceDisp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        QuizInputPanel.add(MultiChoiceDisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(336, 0, -1, -1));
+
+        QuestionDisp.add(QuizInputPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, -1, -1));
 
         javax.swing.GroupLayout MainQuizDispLayout = new javax.swing.GroupLayout(MainQuizDisp);
         MainQuizDisp.setLayout(MainQuizDispLayout);
         MainQuizDispLayout.setHorizontalGroup(
             MainQuizDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(QuestionDisp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(QuizInputPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         MainQuizDispLayout.setVerticalGroup(
             MainQuizDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainQuizDispLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(21, 21, 21)
                 .addComponent(QuestionDisp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(QuizInputPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         QuizPanelMain.add(MainQuizDisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1420, 790));
@@ -870,6 +1021,12 @@ private Scanner Scanner1;
     MakeQuizMain.setVisible(false);
 //Sets quiz name in quiz panel
     QuizNameLabel.setText(QuizName1);
+    try {
+        //Prepares Question 1
+        readQuestion1M();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
     }//GEN-LAST:event_QuizStartM1MouseReleased
 
     private void QuizStartM2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM2MouseEntered
@@ -1143,6 +1300,162 @@ private Scanner Scanner1;
     MakeQuizMain.setVisible(true);
     }//GEN-LAST:event_MakeQuizLabelMouseClicked
 
+    private void Option1MultiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Option1MultiMouseEntered
+    if (Option1MultiB == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceHov.png"));
+        Option1Multi.setIcon(IIreg);        
+    }
+    else if (Option1MultiB == true) {
+        
+    }    
+    }//GEN-LAST:event_Option1MultiMouseEntered
+
+    private void Option1MultiMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Option1MultiMouseExited
+    if (Option1MultiB == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"));
+        Option1Multi.setIcon(IIreg);        
+    }
+    else if (Option1MultiB == true) {
+        
+    } 
+    }//GEN-LAST:event_Option1MultiMouseExited
+
+    private void Option1MultiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Option1MultiMouseClicked
+    if (Option1MultiB == false){
+        Option1MultiM();
+        Option1MultiB = true;
+        Option2MultiB = false;
+        Option3MultiB = false;
+        Option4MultiB = false;
+    }
+    else if (Option1MultiB == true) {
+        Option1RMultiM();
+        Option1MultiB = false;
+        Option2MultiB = false;
+        Option3MultiB = false;
+        Option4MultiB = false;
+    }
+        
+    }//GEN-LAST:event_Option1MultiMouseClicked
+
+    private void Option2MultiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Option2MultiMouseEntered
+//Changes label to imagehovered
+    if (Option2MultiB == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceHov.png"));
+        Option2Multi.setIcon(IIreg);        
+    }
+    else if (Option2MultiB == true) {
+    } 
+    }//GEN-LAST:event_Option2MultiMouseEntered
+
+    private void Option2MultiMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Option2MultiMouseExited
+//Changes label to image def
+    if (Option2MultiB == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"));
+        Option2Multi.setIcon(IIreg);        
+    }
+    else if (Option2MultiB == true) {
+    } 
+    }//GEN-LAST:event_Option2MultiMouseExited
+
+    private void Option2MultiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Option2MultiMouseClicked
+//Changes label to clicked and changes others to def
+    if (Option2MultiB == false){
+        Option2MultiM();
+        Option1MultiB = false;
+        Option2MultiB = true;
+        Option3MultiB = false;
+        Option4MultiB = false;
+    }
+    else if (Option2MultiB == true) {
+        Option2RMultiM();
+        Option1MultiB = false;
+        Option2MultiB = false;
+        Option3MultiB = false;
+        Option4MultiB = false;
+    }
+    }//GEN-LAST:event_Option2MultiMouseClicked
+
+    private void Option3MultiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Option3MultiMouseEntered
+//Changes label to imagehovered
+    if (Option3MultiB == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceHov.png"));
+        Option3Multi.setIcon(IIreg);        
+    }
+    else if (Option3MultiB == true) {
+        
+    } 
+    }//GEN-LAST:event_Option3MultiMouseEntered
+
+    private void Option3MultiMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Option3MultiMouseExited
+//Changes label to image def
+    if (Option3MultiB == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"));
+        Option3Multi.setIcon(IIreg);        
+    }
+    else if (Option3MultiB == true) {
+        
+    } 
+    }//GEN-LAST:event_Option3MultiMouseExited
+
+    private void Option3MultiMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Option3MultiMousePressed
+//Changes label to clicked and changes others to def
+    if (Option3MultiB == false){
+        Option3MultiM();
+        Option1MultiB = false;
+        Option2MultiB = false;
+        Option3MultiB = true;
+        Option4MultiB = false;
+    }
+    else if (Option3MultiB == true) {
+        Option3RMultiM();
+        Option1MultiB = false;
+        Option2MultiB = false;
+        Option3MultiB = false;
+        Option4MultiB = false;
+    }
+    }//GEN-LAST:event_Option3MultiMousePressed
+
+    private void Option4MultiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Option4MultiMouseEntered
+//Changes label to imagehovered
+    if (Option4MultiB == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceHov.png"));
+        Option4Multi.setIcon(IIreg);        
+    }
+    else if (Option4MultiB == true) {
+        
+    } 
+    }//GEN-LAST:event_Option4MultiMouseEntered
+
+    private void Option4MultiMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Option4MultiMouseExited
+//Changes label to image def
+    if (Option4MultiB == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"));
+        Option4Multi.setIcon(IIreg);        
+    }
+    else if (Option4MultiB == true) {
+        
+    } 
+    }//GEN-LAST:event_Option4MultiMouseExited
+
+    private void Option4MultiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Option4MultiMouseClicked
+//Changes label to clicked and changes others to def
+    if (Option4MultiB == false){
+        Option4MultiM();
+        Option1MultiB = false;
+        Option2MultiB = false;
+        Option3MultiB = false;
+        Option4MultiB = true;
+    }
+    else if (Option4MultiB == true) {
+        Option4RMultiM();
+        Option1MultiB = false;
+        Option2MultiB = false;
+        Option3MultiB = false;
+        Option4MultiB = false;
+    }
+    }//GEN-LAST:event_Option4MultiMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1199,7 +1512,12 @@ private Scanner Scanner1;
     private javax.swing.JPanel MultiChoiceDisp;
     private javax.swing.JPanel MultiChoiceDisp1;
     private javax.swing.JLabel OpenQuizLabel;
+    private javax.swing.JLabel Option1Multi;
+    private javax.swing.JLabel Option2Multi;
+    private javax.swing.JLabel Option3Multi;
+    private javax.swing.JLabel Option4Multi;
     private javax.swing.JPanel QuestionDisp;
+    private javax.swing.JLabel QuestionLabelM;
     private javax.swing.JLabel QuitButLabel;
     private javax.swing.JLabel QuitButLabel2;
     private javax.swing.JLabel QuitButLabel3;
