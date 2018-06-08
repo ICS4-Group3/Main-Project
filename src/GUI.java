@@ -4,13 +4,23 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class GUI extends javax.swing.JFrame {
 
+String QuizName0;
 String QuizName1 = "Placeholder Name1";
 String QuizName2 = "Placeholder Name2";
+String QuizName3 = "Placeholder Name3";
+String QuizName4 = "Placeholder Name4";
+String QuizName5 = "Placeholder Name5";
+String QuizName6 = "Placeholder Name6";
+String QuizName7 = "Placeholder Name7";
+String QuizName8 = "Placeholder Name8";
 String FileName1;
+
 int LineNumber;
 private Scanner Scanner1;
     public void openFile() {
@@ -32,8 +42,15 @@ private Scanner Scanner1;
         */
     }
     public void readLineV1() throws IOException {
+        try {
+            Scanner1 = new Scanner(new File(System.getProperty("user.dir")+FileName1));
+        }
+        catch(Exception e){
+            System.out.println("File not found 2");
+        }
         String readLine = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(LineNumber);
-        System.out.println(readLine);
+        QuizName0 = readLine;
+        Scanner1.close();
     }
     public void closeFile1() {
         //Closes this file scanner
@@ -754,10 +771,21 @@ private Scanner Scanner1;
     ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/StartButHov2.png"));
     StartBut.setIcon(IIreg);
     //Switches to main menu
-    MainMenuPanel.setVisible(false);
+    MainMenuPanel.setVisible(true);
     StartMenuPanel.setVisible(false);
-    QuizPanelMain.setVisible(true);
+    QuizPanelMain.setVisible(false);
     MakeQuizMain.setVisible(false);
+    //Reades the Quiz Files tittles and sets them to apropriate names and categories
+    FileName1 = "/src/Files/QuizText1.txt";
+    LineNumber = 0;
+    try {
+        readLineV1();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    QuizName1 = QuizName0;
+    
+    
     }//GEN-LAST:event_StartButMouseReleased
 
     private void OpenQuizLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OpenQuizLabelMouseEntered
