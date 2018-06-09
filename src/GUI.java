@@ -25,6 +25,7 @@ String Question2S;
 String Question3S;
 String Question4S;
 int AnswerMulti1 = 0;
+int correctAnswerMulti1 = 10;
 boolean Option1MultiB = false;
 boolean Option2MultiB = false;
 boolean Option3MultiB = false;
@@ -74,16 +75,50 @@ private Scanner Scanner1;
         catch(Exception e){
             System.out.println("File not found 2");
         }
-        String readLine = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line-1);
-        if (readLine == "C1"){
+        String readLine = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line-2);
+        if (readLine.equals("C1")){
+            System.out.println("The quizquestion type is C1");
             MultiChoiceDisp.setVisible(true);
             QuestionType = 1;
+            //String answer1 = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line+1); 
+            //Option1Multi.setText(answer1);
+            //String veno1 = answer1.substring(0, 2);
+            String answerOption1 = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line + 1);
+            String answerOption2 = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line + 2);
+            String answerOption3 = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line + 3);
+            String answerOption4 = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line + 4);
+            String veno1 = answerOption1.substring(3);
+            Option1Multi.setText(veno1);
+            String check1 = answerOption1.substring(1, 2);
+            String veno2 = answerOption2.substring(3);
+            Option2Multi.setText(veno2);
+            String check2 = answerOption2.substring(1, 2);
+            String veno3 = answerOption3.substring(3);
+            Option3Multi.setText(veno3);
+            String check3 = answerOption3.substring(1, 2);
+            String veno4 = answerOption4.substring(3);
+            Option4Multi.setText(veno4);
+            String check4 = answerOption4.substring(1, 2);
+            if (check1.equals("CA")){
+                correctAnswerMulti1 = 1;
+            }
+            else if (check2.equals("CA")){
+                correctAnswerMulti1 = 2;
+            }
+            else if (check3.equals("CA")){
+                correctAnswerMulti1 = 3;
+            }
+            else if (check4.equals("CA")) {
+                correctAnswerMulti1 = 4;
+            }
+            
+            
         }
-        else if (readLine == "C2"){
+        else if (readLine.equals("C2")){
             
             QuestionType = 2;            
         }
-        else if (readLine == "C3"){
+        else if (readLine.equals("C3")){
             
             QuestionType = 3;
         }
@@ -166,6 +201,7 @@ private Scanner Scanner1;
         MainMenuPanel.setVisible(false);
         StartMenuPanel.setVisible(true);
         QuizPanelMain.setVisible(false);
+        MakeQuizMain.setVisible(false);
     }
 
 
@@ -220,6 +256,7 @@ private Scanner Scanner1;
         QuizNameLabel = new javax.swing.JLabel();
         QuestionLabelM = new javax.swing.JLabel();
         QuizInputPanel = new javax.swing.JPanel();
+        NextBut1 = new javax.swing.JLabel();
         MultiChoiceDisp = new javax.swing.JPanel();
         MultiChoiceDisp1 = new javax.swing.JPanel();
         Option1Multi = new javax.swing.JLabel();
@@ -711,6 +748,11 @@ private Scanner Scanner1;
 
         QuizInputPanel.setBackground(new java.awt.Color(255, 255, 255));
         QuizInputPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        NextBut1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        NextBut1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/NextButDef.png"))); // NOI18N
+        NextBut1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        QuizInputPanel.add(NextBut1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 400, 260, 70));
 
         MultiChoiceDisp.setBackground(new java.awt.Color(255, 255, 255));
         MultiChoiceDisp.setPreferredSize(new java.awt.Dimension(710, 516));
@@ -1511,6 +1553,7 @@ private Scanner Scanner1;
     private javax.swing.JPanel MakeQuizMain;
     private javax.swing.JPanel MultiChoiceDisp;
     private javax.swing.JPanel MultiChoiceDisp1;
+    private javax.swing.JLabel NextBut1;
     private javax.swing.JLabel OpenQuizLabel;
     private javax.swing.JLabel Option1Multi;
     private javax.swing.JLabel Option2Multi;
