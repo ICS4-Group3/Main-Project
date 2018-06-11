@@ -1,18 +1,18 @@
 Popular Games Quiz
 C1
-Q1T1
+T1
 What is the main character of Tomb Raider?
 WA Indiana Jones
 CA Laura Croft
 WA Michel Angelo
 WA Nathan Cross
-Q2T2
+T2
 There are curently 5 Halo Games
 CA True
 WA False
 ELDNR
 ELDNR
-Q3T1
+T1
 What is the name of the video game consle curently name by Microsoft
 WA C Box One
 WA Mega Play 3
