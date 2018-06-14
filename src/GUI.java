@@ -1794,7 +1794,7 @@ private Scanner Scanner1;
     private void FalseOption1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FalseOption1MouseEntered
    //Changes button to hov view
     if (FalseOption1B == false){
-        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButHov.png"));
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/FalseButHov.png"));
         FalseOption1.setIcon(IIreg);         
     }
     else if (FalseOption1B == true) {
@@ -1805,7 +1805,7 @@ private Scanner Scanner1;
     private void FalseOption1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FalseOption1MouseExited
    //Changes button to def view
     if (FalseOption1B == false){
-        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButDef.png"));
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/FalseButDef.png"));
         FalseOption1.setIcon(IIreg);         
     }
     else if (FalseOption1B == true) {
@@ -1816,7 +1816,7 @@ private Scanner Scanner1;
     private void FalseOption1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FalseOption1MousePressed
    //Changes button to click view
     if (FalseOption1B == false){
-        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButClick.png"));
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/FalseButClick.png"));
         FalseOption1.setIcon(IIreg);         
     }
     else if (FalseOption1B == true) {
@@ -1827,7 +1827,7 @@ private Scanner Scanner1;
     private void FalseOption1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FalseOption1MouseReleased
 //Changes button to def view and runs a check code
     if (FalseOption1B == false){
-        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButDef.png"));
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/FalseButDef.png"));
         FalseOption1.setIcon(IIreg); 
         FalseOption1B = true;
         TrueOption1B = true;
