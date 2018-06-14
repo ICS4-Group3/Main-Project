@@ -13,7 +13,7 @@ WA False
 ELDNR
 ELDNR
 T1
-What is the name of the video game consle curently name by Microsoft
+What is the name of the video game consle curently made by Microsoft
 WA C Box One
 WA Mega Play 3
 CA X Box One

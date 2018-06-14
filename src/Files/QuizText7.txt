@@ -48,16 +48,4 @@ CA True
 WA False
 ELDNR
 ELDNR
-T1 
-What is the name of Bastion's Bird?
-WA Troy
-WA Jimmy
-WA Galileo
-CA Ganymede
-T2
-Who says "It's High Noon!"?
-WA Soldier: 76
-CA McCree
-WA Winston
-WA Genji
 END QUIZ
