@@ -1795,7 +1795,7 @@ private Scanner Scanner1;
    //Changes button to hov view
     if (FalseOption1B == false){
         ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButHov.png"));
-        TrueOption1.setIcon(IIreg);         
+        FalseOption1.setIcon(IIreg);         
     }
     else if (FalseOption1B == true) {
         
@@ -1806,7 +1806,7 @@ private Scanner Scanner1;
    //Changes button to def view
     if (FalseOption1B == false){
         ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButDef.png"));
-        TrueOption1.setIcon(IIreg);         
+        FalseOption1.setIcon(IIreg);         
     }
     else if (FalseOption1B == true) {
         
@@ -1817,7 +1817,7 @@ private Scanner Scanner1;
    //Changes button to click view
     if (FalseOption1B == false){
         ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButClick.png"));
-        TrueOption1.setIcon(IIreg);         
+        FalseOption1.setIcon(IIreg);         
     }
     else if (FalseOption1B == true) {
         
