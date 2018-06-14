@@ -25,14 +25,21 @@ String Question2S;
 String Question3S;
 String Question4S;
 int AnswerMulti1 = 0;
+int AnswerTF = 0;
 int correctAnswerMulti1 = 10;
+int correctAnswerTF = 10;
 boolean Option1MultiB = false;
 boolean Option2MultiB = false;
 boolean Option3MultiB = false;
 boolean Option4MultiB = false;
+boolean TrueOption1B = false;
+boolean FalseOption1B = false;
+boolean NextButFix = false;
 boolean NextTest1 = false;
+boolean EndTestB = false;
 int Question1Line;
 int QuestionType = 0;
+int correctAnswers = 0;
 
 int LineNumber;
 private Scanner Scanner1;
@@ -44,31 +51,25 @@ private Scanner Scanner1;
             System.out.println("File not found 2");
         }
     }
-    public void readFile() throws IOException {
-        /*Might not use this
-        while(Scanner1.hasNext()) {
-            String a = Scanner1.next();
-            String b = Scanner1.next();
-            String c = Scanner1.next();
-            System.out.println(" " + a + " " + b + " " + c);        
-        }
-        */
-    }
-    public void readLineV1() throws IOException {
+
+    public void readTittleV1() throws IOException {
         try {
             Scanner1 = new Scanner(new File(System.getProperty("user.dir")+FileName1));
         }
         catch(Exception e){
             System.out.println("File not found 2");
         }
-        String readLine = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(LineNumber);
-        QuizName0 = readLine;
+        String readLine = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(0);
+        QuizNameLabel.setText(readLine);
+        QuizName1 = readLine;
         Scanner1.close();
     }
     public void closeFile1() {
         //Closes this file scanner
         Scanner1.close();
     }
+    
+    
     public void readQuestion1M() throws IOException {
         try {
             Scanner1 = new Scanner(new File(System.getProperty("user.dir")+FileName1));
@@ -77,13 +78,17 @@ private Scanner Scanner1;
             System.out.println("File not found 2");
         }
         String readLine = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line-1);
-        if (readLine.equals("T1")){
+        String endTest = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line-1);
+        if (endTest.equals("END QUIZ")){
+            EndTestB = true;
+            int TotalQuestions = (Question1Line -2)/5;
+            
+            endTest = " ";            
+        }
+        if (readLine.equals("T1")&& EndTestB == false){
             MultiChoiceDisp.setVisible(true);
             TFChoiceDisp.setVisible(false);
             QuestionType = 1;
-            //String answer1 = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line+1); 
-            //Option1Multi.setText(answer1);
-            //String veno1 = answer1.substring(0, 2);
             String answerOption1 = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line + 1);
             String answerOption2 = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line + 2);
             String answerOption3 = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line + 3);
@@ -102,20 +107,24 @@ private Scanner Scanner1;
             String check4 = answerOption4.substring(0, 2);
             if (check1.equals("CA")){
                 correctAnswerMulti1 = 1;
+                System.out.println("Chekc1");
             }
             else if (check2.equals("CA")){
                 correctAnswerMulti1 = 2;
+                System.out.println("Chekc2");
             }
             else if (check3.equals("CA")){
                 correctAnswerMulti1 = 3;
+                System.out.println("Chekc3");
             }
             else if (check4.equals("CA")) {
                 correctAnswerMulti1 = 4;
+                System.out.println("Chekc1");
             }
             
             
         }
-        else if (readLine.equals("T2")){
+        else if (readLine.equals("T2")&& EndTestB == false){
             MultiChoiceDisp.setVisible(false);
             TFChoiceDisp.setVisible(true);
             QuestionType = 2;
@@ -130,15 +139,17 @@ private Scanner Scanner1;
                 correctAnswerMulti1 = 2;
             }
         }
-        else if (readLine.equals("T3")){
+        else if (readLine.equals("T3")&& EndTestB == false){
             
             QuestionType = 3;
         }
+        if (EndTestB == false){
         String readLine1 = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line);
         Question1S = readLine1;
         QuestionLabelM.setText(Question1S);
-        
+        NextButFix = false;
         Scanner1.close();
+    }
     }
     
     public void setQuestions1M() throws IOException {
@@ -267,6 +278,7 @@ private Scanner Scanner1;
         QuestionDisp = new javax.swing.JPanel();
         QuizNameLabel = new javax.swing.JLabel();
         QuestionLabelM = new javax.swing.JLabel();
+        CheckBut1 = new javax.swing.JLabel();
         NextBut1 = new javax.swing.JLabel();
         QuizInputPanel = new javax.swing.JPanel();
         TFChoiceDisp = new javax.swing.JPanel();
@@ -472,7 +484,7 @@ private Scanner Scanner1;
         });
 
         QuizIconM2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        QuizIconM2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizIconType2.png"))); // NOI18N
+        QuizIconM2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizIconType3.png"))); // NOI18N
         QuizIconM2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout QuizPanelM2Layout = new javax.swing.GroupLayout(QuizPanelM2);
@@ -512,6 +524,10 @@ private Scanner Scanner1;
             }
         });
 
+        QuizIconM3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizIconM3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizIconType3.png"))); // NOI18N
+        QuizIconM3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
         javax.swing.GroupLayout QuizPanelM3Layout = new javax.swing.GroupLayout(QuizPanelM3);
         QuizPanelM3.setLayout(QuizPanelM3Layout);
         QuizPanelM3Layout.setHorizontalGroup(
@@ -548,6 +564,10 @@ private Scanner Scanner1;
                 QuizStartM4MouseReleased(evt);
             }
         });
+
+        QuizIconM4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizIconM4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizIconType6.png"))); // NOI18N
+        QuizIconM4.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout QuizPanelM4Layout = new javax.swing.GroupLayout(QuizPanelM4);
         QuizPanelM4.setLayout(QuizPanelM4Layout);
@@ -623,6 +643,11 @@ private Scanner Scanner1;
             }
         });
 
+        QuizIconM6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizIconM6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizIconType1.png"))); // NOI18N
+        QuizIconM6.setToolTipText("");
+        QuizIconM6.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
         javax.swing.GroupLayout QuizPanelM6Layout = new javax.swing.GroupLayout(QuizPanelM6);
         QuizPanelM6.setLayout(QuizPanelM6Layout);
         QuizPanelM6Layout.setHorizontalGroup(
@@ -659,6 +684,10 @@ private Scanner Scanner1;
                 QuizStartM7MouseReleased(evt);
             }
         });
+
+        QuizIconM7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizIconM7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizIconType1.png"))); // NOI18N
+        QuizIconM7.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout QuizPanelM7Layout = new javax.swing.GroupLayout(QuizPanelM7);
         QuizPanelM7.setLayout(QuizPanelM7Layout);
@@ -761,6 +790,28 @@ private Scanner Scanner1;
         QuestionLabelM.setToolTipText("");
         QuestionDisp.add(QuestionLabelM, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 81, 1420, 66));
 
+        CheckBut1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        CheckBut1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/CheckButDef.png"))); // NOI18N
+        CheckBut1.setToolTipText("");
+        CheckBut1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CheckBut1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                CheckBut1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                CheckBut1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                CheckBut1MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                CheckBut1MouseReleased(evt);
+            }
+        });
+        QuestionDisp.add(CheckBut1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 590, 210, 60));
+
         NextBut1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         NextBut1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/NextButDef.png"))); // NOI18N
         NextBut1.setToolTipText("");
@@ -781,11 +832,12 @@ private Scanner Scanner1;
                 NextBut1MouseReleased(evt);
             }
         });
-        QuestionDisp.add(NextBut1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 610, 210, 70));
+        QuestionDisp.add(NextBut1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 660, 210, 60));
 
         QuizInputPanel.setBackground(new java.awt.Color(255, 255, 255));
         QuizInputPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        TFChoiceDisp.setBackground(new java.awt.Color(255, 255, 255));
         TFChoiceDisp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TrueOption1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -918,7 +970,7 @@ private Scanner Scanner1;
 
         MultiChoiceDisp.add(MultiChoiceDisp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 11, -1, 360));
 
-        QuizInputPanel.add(MultiChoiceDisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 0, 1150, 430));
+        QuizInputPanel.add(MultiChoiceDisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 0, 1150, 390));
 
         QuestionDisp.add(QuizInputPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 1380, -1));
 
@@ -932,8 +984,8 @@ private Scanner Scanner1;
             MainQuizDispLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainQuizDispLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(QuestionDisp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addComponent(QuestionDisp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         QuizPanelMain.add(MainQuizDisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1420, 790));
@@ -1040,24 +1092,7 @@ private Scanner Scanner1;
     StartMenuPanel.setVisible(false);
     QuizPanelMain.setVisible(false);
     MakeQuizMain.setVisible(false);
-    //Reades the Quiz Files tittles and sets them to apropriate names and categories
-    FileName1 = "/src/Files/QuizText1.txt";
-    LineNumber = 0;
-    try {
-        readLineV1();
-    } catch (IOException ex) {
-        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-    }
-    QuizName1 = QuizName0;
-    FileName1 = "/src/Files/QuizText2.txt";
-    LineNumber = 0;
-    try {
-        readLineV1();
-    } catch (IOException ex) {
-        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-    }
-    QuizName2 = QuizName0;
-    
+       
     }//GEN-LAST:event_StartButMouseReleased
 
     private void OpenQuizLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OpenQuizLabelMouseEntered
@@ -1141,9 +1176,17 @@ private Scanner Scanner1;
     QuizPanelMain.setVisible(true);
     MakeQuizMain.setVisible(false);
 //Sets quiz name in quiz panel
+    correctAnswerMulti1 = 0;
+    correctAnswers = 0;    
     QuizNameLabel.setText(QuizName1);
     Question1Line = 3;
+    EndTestB = false;
     FileName1 = "/src/Files/QuizText1.txt";
+    try {
+        readTittleV1();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
     try {
         //Prepares Question 1
         readQuestion1M();
@@ -1179,12 +1222,19 @@ private Scanner Scanner1;
     StartMenuPanel.setVisible(false);
     QuizPanelMain.setVisible(true);
     MakeQuizMain.setVisible(false);
+
 //Sets quiz name in quiz panel
-    QuizNameLabel.setText(QuizName2);
-//Sets quiz name in quiz panel
-    QuizNameLabel.setText(QuizName2);
+    correctAnswerMulti1 = 0;
+    correctAnswers = 0;    
+    QuizNameLabel.setText(QuizName1);
     Question1Line = 3;
+    EndTestB = false;
     FileName1 = "/src/Files/QuizText2.txt";
+    try {
+        readTittleV1();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
     try {
         //Prepares Question 1
         readQuestion1M();
@@ -1215,6 +1265,31 @@ private Scanner Scanner1;
 //Changes label to imagehovered
     ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
     QuizStartM3.setIcon(IIreg);
+
+//Switches to quiz panel
+    MainMenuPanel.setVisible(false);
+    StartMenuPanel.setVisible(false);
+    QuizPanelMain.setVisible(true);
+    MakeQuizMain.setVisible(false);
+
+//Sets quiz name in quiz panel
+    correctAnswerMulti1 = 0;
+    correctAnswers = 0;    
+    QuizNameLabel.setText(QuizName1);
+    Question1Line = 3;
+    EndTestB = false;
+    FileName1 = "/src/Files/QuizText3.txt";
+    try {
+        readTittleV1();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    try {
+        //Prepares Question 1
+        readQuestion1M();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
     }//GEN-LAST:event_QuizStartM3MouseReleased
 
     private void QuizStartM4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM4MouseEntered
@@ -1239,6 +1314,30 @@ private Scanner Scanner1;
 //Changes label to imagehovered
     ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
     QuizStartM4.setIcon(IIreg);
+//Switches to quiz panel
+    MainMenuPanel.setVisible(false);
+    StartMenuPanel.setVisible(false);
+    QuizPanelMain.setVisible(true);
+    MakeQuizMain.setVisible(false);
+
+//Sets quiz name in quiz panel
+    correctAnswerMulti1 = 0;
+    correctAnswers = 0;    
+    QuizNameLabel.setText(QuizName1);
+    Question1Line = 3;
+    EndTestB = false;
+    FileName1 = "/src/Files/QuizText4.txt";
+    try {
+        readTittleV1();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    try {
+        //Prepares Question 1
+        readQuestion1M();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
     }//GEN-LAST:event_QuizStartM4MouseReleased
 
     private void QuizStartM5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM5MouseEntered
@@ -1287,6 +1386,30 @@ private Scanner Scanner1;
 //Changes label to imagehovered
     ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
     QuizStartM6.setIcon(IIreg);
+//Switches to quiz panel
+    MainMenuPanel.setVisible(false);
+    StartMenuPanel.setVisible(false);
+    QuizPanelMain.setVisible(true);
+    MakeQuizMain.setVisible(false);
+
+//Sets quiz name in quiz panel
+    correctAnswerMulti1 = 0;
+    correctAnswers = 0;    
+    QuizNameLabel.setText(QuizName1);
+    Question1Line = 3;
+    EndTestB = false;
+    FileName1 = "/src/Files/QuizText6.txt";
+    try {
+        readTittleV1();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    try {
+        //Prepares Question 1
+        readQuestion1M();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
     }//GEN-LAST:event_QuizStartM6MouseReleased
 
     private void QuizStartM7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM7MouseEntered
@@ -1311,6 +1434,30 @@ private Scanner Scanner1;
 //Changes label to imagehovered
     ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
     QuizStartM7.setIcon(IIreg);
+//Switches to quiz panel
+    MainMenuPanel.setVisible(false);
+    StartMenuPanel.setVisible(false);
+    QuizPanelMain.setVisible(true);
+    MakeQuizMain.setVisible(false);
+
+//Sets quiz name in quiz panel
+    correctAnswerMulti1 = 0;
+    correctAnswers = 0;    
+    QuizNameLabel.setText(QuizName1);
+    Question1Line = 3;
+    EndTestB = false;
+    FileName1 = "/src/Files/QuizText7.txt";
+    try {
+        readTittleV1();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    try {
+        //Prepares Question 1
+        readQuestion1M();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
     }//GEN-LAST:event_QuizStartM7MouseReleased
 
     private void QuizStartM8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM8MouseEntered
@@ -1460,6 +1607,7 @@ private Scanner Scanner1;
         Option2MultiB = false;
         Option3MultiB = false;
         Option4MultiB = false;
+        AnswerMulti1 = 1;
     }
     else if (Option1MultiB == true) {
         Option1RMultiM();
@@ -1499,6 +1647,7 @@ private Scanner Scanner1;
         Option2MultiB = true;
         Option3MultiB = false;
         Option4MultiB = false;
+        AnswerMulti1 = 2;
     }
     else if (Option2MultiB == true) {
         Option2RMultiM();
@@ -1539,6 +1688,7 @@ private Scanner Scanner1;
         Option2MultiB = false;
         Option3MultiB = true;
         Option4MultiB = false;
+        AnswerMulti1 = 3;
     }
     else if (Option3MultiB == true) {
         Option3RMultiM();
@@ -1579,6 +1729,7 @@ private Scanner Scanner1;
         Option2MultiB = false;
         Option3MultiB = false;
         Option4MultiB = true;
+        AnswerMulti1 = 4;
     }
     else if (Option4MultiB == true) {
         Option4RMultiM();
@@ -1615,36 +1766,216 @@ private Scanner Scanner1;
     //Changes button to hov view
     ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/NextButHov.png"));
     NextBut1.setIcon(IIreg);
-    System.out.println(correctAnswerMulti1 + "is correct");
-    if (NextTest1 == false){
-        System.out.println("If statment started");
-        if (QuestionType == 1) {
-            System.out.println("If statment started----");
+    Question1Line = Question1Line + 6;
+        try {
+        //Prepares next question
+        readQuestion1M();
+        } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+         
+    }
+        TrueOption1B = false;
+        FalseOption1B = false;
+        Option1MultiB = false;
+        Option2MultiB = false;
+        Option3MultiB = false;
+        Option4MultiB = false;
+        ImageIcon Ireg = new ImageIcon(getClass().getResource("/Images/MultiChoiceDef.png"));
+        Option1Multi.setIcon(Ireg);
+        Option2Multi.setIcon(Ireg);
+        Option3Multi.setIcon(Ireg);
+        Option4Multi.setIcon(Ireg);
+        AnswerMulti1 = 0;
+        ImageIcon IIIreg = new ImageIcon(getClass().getResource("/Images/TrueButDef.png"));
+        ImageIcon IIIIreg = new ImageIcon(getClass().getResource("/Images/FalseButDef.png"));
+        TrueOption1.setIcon(IIIreg); 
+        FalseOption1.setIcon(IIIIreg); 
+    
+    if (AnswerMulti1 == correctAnswerMulti1){
+        correctAnswers = correctAnswers + 1;
+        System.out.println("Currect Correct answer was" + correctAnswerMulti1);
+        System.out.println("Currect Correct answers is" + correctAnswers);
+    }
+    System.out.println("Currect Correct answer was" + correctAnswerMulti1);
+    AnswerMulti1=10;
+    
+    
+    
+    }//GEN-LAST:event_NextBut1MouseReleased
+
+    private void TrueOption1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TrueOption1MouseEntered
+    //Changes button to hov view
+    if (TrueOption1B == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButHov.png"));
+        TrueOption1.setIcon(IIreg);         
+    }
+    else if (TrueOption1B == true) {
+        
+    } 
+    
+    }//GEN-LAST:event_TrueOption1MouseEntered
+
+    private void TrueOption1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TrueOption1MouseExited
+    //Changes button to hov view
+    if (TrueOption1B == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButDef.png"));
+        TrueOption1.setIcon(IIreg);         
+    }
+    else if (TrueOption1B == true) {
+        
+    } 
+    }//GEN-LAST:event_TrueOption1MouseExited
+
+    private void TrueOption1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TrueOption1MousePressed
+    //Changes button to hov view
+    if (TrueOption1B == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButClick.png"));
+        TrueOption1.setIcon(IIreg);         
+    }
+    else if (TrueOption1B == true) {
+        
+    } 
+    }//GEN-LAST:event_TrueOption1MousePressed
+
+    private void TrueOption1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TrueOption1MouseReleased
+    //Changes button to hov view
+    if (TrueOption1B == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButDef.png"));
+        TrueOption1.setIcon(IIreg); 
+        TrueOption1B = true;
+        FalseOption1B = true;
+    }
+    else if (TrueOption1B == true) {
+        
+    }
+    ImageIcon TCreg = new ImageIcon(getClass().getResource("/Images/TrueButCA.png"));
+    ImageIcon TWreg = new ImageIcon(getClass().getResource("/Images/TrueButWA.png"));
+    ImageIcon FCreg = new ImageIcon(getClass().getResource("/Images/FalseButCA.png"));
+    ImageIcon FWreg = new ImageIcon(getClass().getResource("/Images/FalseButWA.png"));
+    if (correctAnswerMulti1==1 ){            
+        TrueOption1.setIcon(TCreg);
+        FalseOption1.setIcon(FWreg);
+        AnswerTF = 1;
+    }
+    if (correctAnswerMulti1==2){            
+        TrueOption1.setIcon(TWreg);
+        FalseOption1.setIcon(FCreg);
+    }
+    NextTest1 = true;
+    }//GEN-LAST:event_TrueOption1MouseReleased
+
+    private void FalseOption1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FalseOption1MouseEntered
+   //Changes button to hov view
+    if (FalseOption1B == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButHov.png"));
+        TrueOption1.setIcon(IIreg);         
+    }
+    else if (FalseOption1B == true) {
+        
+    } 
+    }//GEN-LAST:event_FalseOption1MouseEntered
+
+    private void FalseOption1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FalseOption1MouseExited
+   //Changes button to def view
+    if (FalseOption1B == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButDef.png"));
+        TrueOption1.setIcon(IIreg);         
+    }
+    else if (FalseOption1B == true) {
+        
+    } 
+    }//GEN-LAST:event_FalseOption1MouseExited
+
+    private void FalseOption1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FalseOption1MousePressed
+   //Changes button to click view
+    if (FalseOption1B == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButClick.png"));
+        TrueOption1.setIcon(IIreg);         
+    }
+    else if (FalseOption1B == true) {
+        
+    }
+    }//GEN-LAST:event_FalseOption1MousePressed
+
+    private void FalseOption1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FalseOption1MouseReleased
+//Changes button to def view and runs a check code
+    if (FalseOption1B == false){
+        ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButDef.png"));
+        FalseOption1.setIcon(IIreg); 
+        FalseOption1B = true;
+        TrueOption1B = true;
+    }
+    else if (FalseOption1B == true) {
+        
+    }
+    ImageIcon TCreg = new ImageIcon(getClass().getResource("/Images/TrueButCA.png"));
+    ImageIcon TWreg = new ImageIcon(getClass().getResource("/Images/TrueButWA.png"));
+    ImageIcon FCreg = new ImageIcon(getClass().getResource("/Images/FalseButCA.png"));
+    ImageIcon FWreg = new ImageIcon(getClass().getResource("/Images/FalseButWA.png"));
+    if (correctAnswerMulti1==1 ){            
+        TrueOption1.setIcon(TCreg);
+        FalseOption1.setIcon(FWreg);
+    }
+    if (correctAnswerMulti1==2){            
+        TrueOption1.setIcon(TWreg);
+        FalseOption1.setIcon(FCreg);
+        AnswerTF = 1;
+    }
+    }//GEN-LAST:event_FalseOption1MouseReleased
+
+    private void CheckBut1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckBut1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CheckBut1MouseClicked
+
+    private void CheckBut1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckBut1MouseEntered
+//Changes button to hov view
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/CheckButHov.png"));
+    CheckBut1.setIcon(IIreg);
+    }//GEN-LAST:event_CheckBut1MouseEntered
+
+    private void CheckBut1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckBut1MouseExited
+//Changes button to def view
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/CheckButDef.png"));
+    CheckBut1.setIcon(IIreg);
+    }//GEN-LAST:event_CheckBut1MouseExited
+
+    private void CheckBut1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckBut1MousePressed
+//Changes button to def view
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/CheckButClick.png"));
+    CheckBut1.setIcon(IIreg);
+    }//GEN-LAST:event_CheckBut1MousePressed
+
+    private void CheckBut1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckBut1MouseReleased
+//Changes button to def view
+    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/CheckButHov.png"));
+    CheckBut1.setIcon(IIreg);
+    
+    if (QuestionType == 1) {        
         ImageIcon Creg = new ImageIcon(getClass().getResource("/Images/MultiChoiceCA.png"));
         ImageIcon Wreg = new ImageIcon(getClass().getResource("/Images/MultiChoiceWA.png"));
         if (correctAnswerMulti1==1 ){
-            System.out.println("If statment started2");
+            
             Option1Multi.setIcon(Creg);
             Option2Multi.setIcon(Wreg);
             Option3Multi.setIcon(Wreg);
             Option4Multi.setIcon(Wreg);
         }
         if (correctAnswerMulti1==2){
-            System.out.println("If statment started3");
+            
             Option1Multi.setIcon(Wreg);
             Option2Multi.setIcon(Creg);
             Option3Multi.setIcon(Wreg);
             Option4Multi.setIcon(Wreg);
         }
         if (correctAnswerMulti1==3){
-            System.out.println("If statment started4");
+            
             Option1Multi.setIcon(Wreg);
             Option2Multi.setIcon(Wreg);
             Option3Multi.setIcon(Creg);
             Option4Multi.setIcon(Wreg);
         }
         if (correctAnswerMulti1==4){
-            System.out.println("If statment started5");
+            
             Option1Multi.setIcon(Wreg);
             Option2Multi.setIcon(Wreg);
             Option3Multi.setIcon(Wreg);
@@ -1652,70 +1983,23 @@ private Scanner Scanner1;
         }
         }
         if (QuestionType == 2){
-            
+            System.out.println("Enetered type 2");
+            ImageIcon TCreg = new ImageIcon(getClass().getResource("/Images/TrueButCA.png"));
+            ImageIcon TWreg = new ImageIcon(getClass().getResource("/Images/TrueButWA.png"));
+            ImageIcon FCreg = new ImageIcon(getClass().getResource("/Images/FalseeButCA.png"));
+            ImageIcon FWreg = new ImageIcon(getClass().getResource("/Images/FalseButWA.png"));
+            if (correctAnswerMulti1==1 ){            
+            TrueOption1.setIcon(TCreg);
+            FalseOption1.setIcon(FWreg);
+            }
+            if (correctAnswerMulti1==2){            
+            TrueOption1.setIcon(TWreg);
+            FalseOption1.setIcon(FCreg);
+            }
         }
         NextTest1 = true;
-    }
     
-    
-    if (NextTest1 == true){
-        Question1Line = Question1Line + 6;
-        try {
-        //Prepares next question
-        readQuestion1M();
-        } catch (IOException ex) {
-        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-    }
-    }
-    }//GEN-LAST:event_NextBut1MouseReleased
-
-    private void TrueOption1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TrueOption1MouseEntered
-    //Changes button to hov view
-    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButHov.png"));
-    TrueOption1.setIcon(IIreg); 
-    }//GEN-LAST:event_TrueOption1MouseEntered
-
-    private void TrueOption1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TrueOption1MouseExited
-    //Changes button to def view
-    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButDef.png"));
-    TrueOption1.setIcon(IIreg); 
-    }//GEN-LAST:event_TrueOption1MouseExited
-
-    private void TrueOption1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TrueOption1MousePressed
-    //Changes button to click view
-    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButClick.png"));
-    TrueOption1.setIcon(IIreg); 
-    }//GEN-LAST:event_TrueOption1MousePressed
-
-    private void TrueOption1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TrueOption1MouseReleased
-    //Changes button to hov view
-    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/TrueButHov.png"));
-    TrueOption1.setIcon(IIreg); 
-    }//GEN-LAST:event_TrueOption1MouseReleased
-
-    private void FalseOption1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FalseOption1MouseEntered
-    //Changes button to hov view
-    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/FalseButHov.png"));
-    FalseOption1.setIcon(IIreg);
-    }//GEN-LAST:event_FalseOption1MouseEntered
-
-    private void FalseOption1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FalseOption1MouseExited
-    //Changes button to def view
-    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/FalseButDef.png"));
-    FalseOption1.setIcon(IIreg);
-    }//GEN-LAST:event_FalseOption1MouseExited
-
-    private void FalseOption1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FalseOption1MousePressed
-    //Changes button to click view
-    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/FalseButClick.png"));
-    FalseOption1.setIcon(IIreg);
-    }//GEN-LAST:event_FalseOption1MousePressed
-
-    private void FalseOption1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FalseOption1MouseReleased
-    //Changes button to hov view
-    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/FalseButHov.png"));
-    FalseOption1.setIcon(IIreg);
-    }//GEN-LAST:event_FalseOption1MouseReleased
+    }//GEN-LAST:event_CheckBut1MouseReleased
 
     /**
      * @param args the command line arguments
@@ -1754,6 +2038,7 @@ private Scanner Scanner1;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BlueLineBottom;
+    private javax.swing.JLabel CheckBut1;
     private javax.swing.JLabel ExitQuizBut;
     private javax.swing.JLabel ExitQuizBut2;
     private javax.swing.JLabel FalseOption1;
