@@ -1,0 +1,63 @@
+Harry Potter books Quiz
+C6
+Q1T2
+Dobby is a normal House elf?
+WA True 
+CA False
+ELDNR
+ELDNR
+Q2T1
+Which of the following is NOT a part of the deathly Hallows?
+CA Harry Potter
+WA Elder Wand
+WA Cloak of Invisibility 
+WA Resurrection Stone
+Q3T1
+Where do the Weasley's live in books 1-6
+WA The Surrow
+CA The Burrow
+WA The Barrow
+WA The Sarrow
+Q4T2
+S.P.E.W stands for Society for the Promotion of Elfish Warfare?
+WA True 
+CA False
+ELDNR
+ELDNR
+Q5T1
+Which of the following does NOT contain a part of Voldemort's soul?
+WA Harry Potter
+WA Tom Riddle's Diary
+CA Hermione's Time turner
+WA Nagini 
+Q6T1
+Where was neville longbottom's parents in the books?
+WA Dead
+WA Working at the Ministry of Magic
+CA At St Mungo's Hospital for Magical Maladies and Injuries
+WA Unknown
+Q7T1
+Who is the DADA teacher in the fifth book?
+WA Professor Lupin
+WA Professor Snape
+CA Professor Umbridge
+WA Professor Lockhart
+Q8T2
+Cho Chang is the Ravenclaw Keeper for Quidditch?
+WA True 
+CA False
+ELDNR
+ELDNR
+Q9T1
+Who is the half-blood prince?
+WA Harry Potter
+CA Severus Snape
+WA Draco Malfoy
+WA Tom Riddle
+Q10T1
+Who is the DADA teacher in book 6?
+WA Professor Slughorn
+WA Professor Umbridge
+WA Professor Karkaroff
+CA Professor Snape
+END QUIZ

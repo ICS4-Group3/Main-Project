@@ -1,0 +1,63 @@
+Overwatch Quiz
+C1
+Q1T1
+Which character uses a mech?
+CA D.Va
+WA Sombra
+WA Mercy
+WA Tracer
+Q2T1
+Who is this Armor-wearing Gorilla?
+WA Lucio
+WA Bation
+WA Soldier: 76
+CA Winston
+Q3T1
+How many playable characters were there at the start of the game?
+WA 22
+CA 21
+WA 19
+WA 20
+Q4T1
+Who is Genji's Sibling?
+WA Reinhardt
+WA Mei
+CA Hanzo
+WA Soldier: 76
+Q5T1
+Which character is oldest in the game?
+WA Ana
+WA Reaper
+WA Torbjorn
+CA Reinhardt
+Q6T1
+Which Nordic country does Torbjörn hail from?
+WA Finland
+CA Sweden
+WA Iceland
+WA Norway
+Q7T2
+D.Va is the youngest hero in the game?
+WA True
+CA False
+ELDNR
+ELDNR
+Q8T2
+Tracers ultimate is called Pulse Bomb?
+CA True
+WA False
+ELDNR
+ELDNR
+Q9T1 
+What is the name of Bastion's Bird?
+WA Troy
+WA Jimmy
+WA Galileo
+CA Ganymede
+Q10T2
+Who says "It's High Noon!"?
+WA Soldier: 76
+CA McCree
+WA Winston
+WA Genji
+END QUIZ

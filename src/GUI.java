@@ -116,8 +116,19 @@ private Scanner Scanner1;
             
         }
         else if (readLine.equals("T2")){
-            
-            QuestionType = 2;            
+            MultiChoiceDisp.setVisible(false);
+            TFChoiceDisp.setVisible(true);
+            QuestionType = 2;
+            String answerOption1 = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line + 1);
+            String answerOption2 = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line + 2);
+            String check1 = answerOption1.substring(0, 2);
+            String check2 = answerOption2.substring(0, 2);
+            if (check1.equals("CA")){
+                correctAnswerMulti1 = 1;
+            }
+            else if (check2.equals("CA")){
+                correctAnswerMulti1 = 2;
+            }
         }
         else if (readLine.equals("T3")){
             
@@ -1038,7 +1049,14 @@ private Scanner Scanner1;
         Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
     }
     QuizName1 = QuizName0;
-    
+    FileName1 = "/src/Files/QuizText2.txt";
+    LineNumber = 0;
+    try {
+        readLineV1();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    QuizName2 = QuizName0;
     
     }//GEN-LAST:event_StartButMouseReleased
 
@@ -1125,6 +1143,7 @@ private Scanner Scanner1;
 //Sets quiz name in quiz panel
     QuizNameLabel.setText(QuizName1);
     Question1Line = 3;
+    FileName1 = "/src/Files/QuizText1.txt";
     try {
         //Prepares Question 1
         readQuestion1M();
@@ -1162,6 +1181,16 @@ private Scanner Scanner1;
     MakeQuizMain.setVisible(false);
 //Sets quiz name in quiz panel
     QuizNameLabel.setText(QuizName2);
+//Sets quiz name in quiz panel
+    QuizNameLabel.setText(QuizName2);
+    Question1Line = 3;
+    FileName1 = "/src/Files/QuizText2.txt";
+    try {
+        //Prepares Question 1
+        readQuestion1M();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
     }//GEN-LAST:event_QuizStartM2MouseReleased
 
     private void QuizStartM3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM3MouseEntered
@@ -1625,10 +1654,12 @@ private Scanner Scanner1;
         if (QuestionType == 2){
             
         }
-        
+        NextTest1 = true;
     }
+    
+    
     if (NextTest1 == true){
-        Question1Line = Question1Line + 4;
+        Question1Line = Question1Line + 6;
         try {
         //Prepares next question
         readQuestion1M();

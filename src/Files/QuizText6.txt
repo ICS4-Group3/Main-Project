@@ -1,0 +1,63 @@
+Mincraft Quiz
+C1
+Q1T1
+What is the name of the first boss that was introduced into the game?
+WA Enderman
+WA Wither
+CA Ender Dragon
+WA Endermite
+Q2T2
+The creator of the game, Markus Persson, Goes by the codename of Natch?
+WA True
+CA False
+ELDNR
+ELDNR
+Q3T1
+What is used as the main currency when trading with villager's?
+WA Diamonds
+CA Emeralds
+WA Gold ingots
+WA Gold Nuggets
+Q4T1
+How do you cure a zombie Villager?
+WA Trap it in a town and wait until it turns into a villager
+WA You can't cure them
+WA Give it a potion of curing
+CA Throw a potion of healing at it
+Q5T1
+What Treasure do you find at the middle of a Ocean monument?
+WA Diamond blocks
+WA A chest
+CA Gold blocks
+WA Emerald blocks
+Q6T2
+A chunk is a 16x16 plot of land in mincraft
+CA True
+WA False
+ELDNR
+ELDNR
+Q7T1
+What do you need to craft an enchantment table?
+WA 3 obsidian, 2 diamonds, 1 book
+CA 4 obsidian, 2 diamonds, 1 book
+WA 4 end stone, 2 diamonds, 1 book
+WA 3 end stone, 2 diamonds, 1 book
+Q8T1
+What pickaxe is needed to get through Obsidian?
+WA Stone
+CA Diamond
+WA Gold
+WA Iron
+Q9T1
+Which biome do coco beans grow on the trees?
+CA Jungle
+WA Plains
+WA Savannah
+WA Swampland
+Q10T1
+What mob rides spiders?
+WA Creepers
+WA Endermen
+CA Skeletons
+WA Zombies
+END QUIZ

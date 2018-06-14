@@ -1,0 +1,63 @@
+Star Wars Episodes 1-6 Quiz
+C3
+Q1T1
+Whose DNA was used to create the Clone Army?
+CA Jango FETT
+WA Boba FETT
+WA Count Dooku
+WA Anikin Skywalker
+Q2T1
+What is Chewbacca's home planet?
+WA Tatooine
+WA Jakku
+CA Kashyyyk
+WA Endor
+Q3T1
+Who said the following in Star Wars a New Hope "Aren't you a little small to be a storm trooper"?
+WA Han Solo
+WA Obi-Wan Kenobi
+WA Luke Skywalker
+CA Princess Leia Organa
+Q4T1
+In which Star Wars movie did Luke find out his relation to Darth Vader?
+WA Star Wars A New Hope
+CA Star Wars The Empire Strikes Back
+WA Star Wars Return of the Jedi
+WA Star Wars Revenge of the Sith
+Q5T1
+In which Star Wars movie was a Spiked Headed apprentice of the Emperor featured?
+WA Star Wars Attack of the Clones
+CA Star Wars The Phantom Menace
+WA Star Wars Revenge of the Sith 
+WA Star Wars A New Hope
+Q6T1
+Who Played Chewbacca in star wars Episodes 3-6?
+WA Mark Hamill
+WA Harrison Ford
+WA Anthony Daniels
+CA Peter Mayhew
+Q7T1
+What does TIE in TIE Fighter stand for?
+CA Twin Ion Engine
+WA Turbo Ion Engine
+WA Thermal Inverse Engine
+WA Techno Incantho Engine
+Q8T2
+Obi-Wan Kenobi told Luke "I find your lack of faith disturbing" when Luke thought the force was not real?
+WA True
+CA False
+ELDNR
+ELDNR
+Q9T2
+Han Solo won his ship in a race with Lando Calrissian?
+WA True
+CA False
+ELDNR
+ELDNR
+Q10T2
+Princess Leia Organa is the daughter of Padmé and Anakin Skywalker
+CA True
+WA False
+ELDNR
+ELDNR
+END QUIZ
