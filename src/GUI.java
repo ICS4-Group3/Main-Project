@@ -77,12 +77,16 @@ private Scanner Scanner1;
         catch(Exception e){
             System.out.println("File not found 2");
         }
+        System.out.println(Question1Line);
         String readLine = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line-1);
+        System.out.println("The currect qread line is" + readLine);
         String endTest = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line-1);
         if (endTest.equals("END QUIZ")){
             EndTestB = true;
             int TotalQuestions = (Question1Line -2)/5;
-            
+            MultiChoiceDisp.setVisible(false);
+            TFChoiceDisp.setVisible(false);
+            QuestionLabelM.setText("Quiz Over");
             endTest = " ";            
         }
         if (readLine.equals("T1")&& EndTestB == false){
@@ -240,8 +244,6 @@ private Scanner Scanner1;
         MainBackground = new javax.swing.JLabel();
         MainMenuPanel = new javax.swing.JPanel();
         QuitButLabel = new javax.swing.JLabel();
-        MakeQuizLabel = new javax.swing.JLabel();
-        OpenQuizLabel = new javax.swing.JLabel();
         HomeButLabel = new javax.swing.JLabel();
         MainMenuBack1 = new javax.swing.JLabel();
         BlueLineBottom = new javax.swing.JLabel();
@@ -362,41 +364,6 @@ private Scanner Scanner1;
             }
         });
         MainMenuPanel.add(QuitButLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 0, 100, 50));
-
-        MakeQuizLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MakeQuizLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MakeQuizButDef.png"))); // NOI18N
-        MakeQuizLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        MakeQuizLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MakeQuizLabelMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                MakeQuizLabelMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                MakeQuizLabelMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                MakeQuizLabelMousePressed(evt);
-            }
-        });
-        MainMenuPanel.add(MakeQuizLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 180, 50));
-
-        OpenQuizLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        OpenQuizLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/OpenQuizButDef.png"))); // NOI18N
-        OpenQuizLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        OpenQuizLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                OpenQuizLabelMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                OpenQuizLabelMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                OpenQuizLabelMouseExited(evt);
-            }
-        });
-        MainMenuPanel.add(OpenQuizLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 180, 50));
 
         HomeButLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         HomeButLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/HomeBut1.png"))); // NOI18N
@@ -1095,30 +1062,6 @@ private Scanner Scanner1;
        
     }//GEN-LAST:event_StartButMouseReleased
 
-    private void OpenQuizLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OpenQuizLabelMouseEntered
-    //Changes label to imagehovered
-    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/OpenQuizButHov.png"));
-    OpenQuizLabel.setIcon(IIreg);
-    }//GEN-LAST:event_OpenQuizLabelMouseEntered
-
-    private void OpenQuizLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OpenQuizLabelMouseExited
-    //Changes label to imagehovered
-    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/OpenQuizButDef.png"));
-    OpenQuizLabel.setIcon(IIreg);
-    }//GEN-LAST:event_OpenQuizLabelMouseExited
-
-    private void MakeQuizLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MakeQuizLabelMouseEntered
-    //Changes label to imagehovered
-    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MakeQuizButHov.png"));
-    MakeQuizLabel.setIcon(IIreg);
-    }//GEN-LAST:event_MakeQuizLabelMouseEntered
-
-    private void MakeQuizLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MakeQuizLabelMouseExited
-//Changes label to imagehovered
-    ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/MakeQuizButDef.png"));
-    MakeQuizLabel.setIcon(IIreg);
-    }//GEN-LAST:event_MakeQuizLabelMouseExited
-
     private void HomeButLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeButLabelMouseEntered
 //Changes label to imagehovered
     ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/HomeButHov.png"));
@@ -1563,22 +1506,6 @@ private Scanner Scanner1;
     private void QuitButLabel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuitButLabel3MouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_QuitButLabel3MouseExited
-
-    private void OpenQuizLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OpenQuizLabelMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OpenQuizLabelMouseClicked
-
-    private void MakeQuizLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MakeQuizLabelMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MakeQuizLabelMousePressed
-
-    private void MakeQuizLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MakeQuizLabelMouseClicked
-//Switches to make quiz panel
-    MainMenuPanel.setVisible(false);
-    StartMenuPanel.setVisible(false);
-    QuizPanelMain.setVisible(false);
-    MakeQuizMain.setVisible(true);
-    }//GEN-LAST:event_MakeQuizLabelMouseClicked
 
     private void Option1MultiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Option1MultiMouseEntered
     if (Option1MultiB == false){
@@ -2054,12 +1981,10 @@ private Scanner Scanner1;
     private javax.swing.JLabel MainMenuBack4;
     private javax.swing.JPanel MainMenuPanel;
     private javax.swing.JPanel MainQuizDisp;
-    private javax.swing.JLabel MakeQuizLabel;
     private javax.swing.JPanel MakeQuizMain;
     private javax.swing.JPanel MultiChoiceDisp;
     private javax.swing.JPanel MultiChoiceDisp1;
     private javax.swing.JLabel NextBut1;
-    private javax.swing.JLabel OpenQuizLabel;
     private javax.swing.JLabel Option1Multi;
     private javax.swing.JLabel Option2Multi;
     private javax.swing.JLabel Option3Multi;
