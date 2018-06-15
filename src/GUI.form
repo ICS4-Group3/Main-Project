@@ -247,7 +247,7 @@
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/Images/QuizIconType1.png"/>
+                          <Image iconType="3" name="/Images/QuizIconType2.png"/>
                         </Property>
                         <Property name="verticalAlignment" type="int" value="3"/>
                       </Properties>
@@ -490,6 +490,13 @@
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="QuizIconM5">
+                      <Properties>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/Images/QuizIconType4.png"/>
+                        </Property>
+                        <Property name="verticalAlignment" type="int" value="3"/>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>

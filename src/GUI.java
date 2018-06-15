@@ -393,7 +393,7 @@ private Scanner Scanner1;
         QuizPanelM.setPreferredSize(new java.awt.Dimension(292, 292));
 
         QuizIconM1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        QuizIconM1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizIconType1.png"))); // NOI18N
+        QuizIconM1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizIconType2.png"))); // NOI18N
         QuizIconM1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         QuizStartM1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -572,6 +572,10 @@ private Scanner Scanner1;
                 QuizStartM5MouseReleased(evt);
             }
         });
+
+        QuizIconM5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizIconM5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizIconType4.png"))); // NOI18N
+        QuizIconM5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout QuizPanelM5Layout = new javax.swing.GroupLayout(QuizPanelM5);
         QuizPanelM5.setLayout(QuizPanelM5Layout);
@@ -1305,6 +1309,29 @@ private Scanner Scanner1;
 //Changes label to imagehovered
     ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
     QuizStartM5.setIcon(IIreg);
+//Switches to quiz panel
+    MainMenuPanel.setVisible(false);
+    StartMenuPanel.setVisible(false);
+    QuizPanelMain.setVisible(true);
+    MakeQuizMain.setVisible(false);
+//Sets quiz name in quiz panel
+    correctAnswerMulti1 = 0;
+    correctAnswers = 0;    
+    QuizNameLabel.setText(QuizName1);
+    Question1Line = 3;
+    EndTestB = false;
+    FileName1 = "/src/Files/QuizText5.txt";
+    try {
+        readTittleV1();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    try {
+        //Prepares Question 1
+        readQuestion1M();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
     }//GEN-LAST:event_QuizStartM5MouseReleased
 
     private void QuizStartM6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizStartM6MouseEntered

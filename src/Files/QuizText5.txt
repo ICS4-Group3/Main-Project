@@ -1,0 +1,57 @@
+Grade 9 Math Quiz
+C4
+T1
+What is the name of the very maximum or minimum point on a parabola?
+WA The algebra
+CA The Vertex
+WA The Axis
+WA The action point
+T1
+What is the name of the bottom part of a fraction?
+WA Numerator
+WA X
+CA Denominator
+WA Y
+T1
+In Y=mx+b what does m represent?
+WA The y-axis
+WA The x-axis
+CA The slope of the line
+WA The denominator
+T1
+Solve x + 1 = 9 for x
+WA x = 1
+WA x = -8
+WA x = 10
+CA x = 8
+T1
+Solve 5 to the power of 3
+CA 125
+WA 25
+WA 5
+WA 8
+T1
+Solve 4x + 6 = -10 for x
+WA x = 4
+CA x = -4
+WA x = -16
+WA x = -12
+T1
+Solve y = 2x - 3 for y if x = 2
+CA y = 1
+WA y = 7
+WA y = -1
+WA y = 5
+T1
+What is the square root of 25?
+WA 2.5
+WA 625
+CA 5
+WA -25
+T1
+What is the y-axis of y = 6x + 9
+WA Need further info to answer
+CA 9 
+WA 6
+WA 15
+END QUIZ
