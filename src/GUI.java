@@ -241,6 +241,7 @@ private Scanner Scanner1;
         StartBut = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         MainMenuBack = new javax.swing.JLabel();
+        Logo = new javax.swing.JLabel();
         MainBackground = new javax.swing.JLabel();
         MainMenuPanel = new javax.swing.JPanel();
         QuitButLabel = new javax.swing.JLabel();
@@ -341,6 +342,9 @@ private Scanner Scanner1;
         );
 
         StartMenuPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 40));
+
+        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Quizm.png"))); // NOI18N
+        StartMenuPanel.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 240, -1, -1));
 
         MainBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MainBackground_1.png"))); // NOI18N
         StartMenuPanel.add(MainBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 850));
@@ -1970,6 +1974,7 @@ private Scanner Scanner1;
     private javax.swing.JLabel ExitQuizBut2;
     private javax.swing.JLabel FalseOption1;
     private javax.swing.JLabel HomeButLabel;
+    private javax.swing.JLabel Logo;
     private javax.swing.JLabel MainBackground;
     private javax.swing.JLabel MainBackground1;
     private javax.swing.JLabel MainBackground2;
