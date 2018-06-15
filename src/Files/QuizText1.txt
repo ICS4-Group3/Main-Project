@@ -1,21 +1,51 @@
-Popular Games Quiz
-C1
+Camera Quiz
+C2
 T1
-What is the main character of Tomb Raider?
-WA Indiana Jones
-CA Laura Croft
-WA Michel Angelo
-WA Nathan Cross
+When was the camera invented?
+CA 1816
+WA 1819
+WA 1817
+WA 1815
+T1
+In a camera, what is the main purpose of a lens?
+WA To control the amount of light that enters the camera
+CA  To bend light rays so the camera can record them
+WA To illuminate the subject being recorded
+WA To keep dust from entering the camera body
+T1
+What part of a camera controls the length of time for a picture's exposure?
+WA The aperture
+WA The flash
+WA The timer
+CA The shutters
 T2
-There are curently 5 Halo Games
+An image is produced on film through a chemical reaction, caused by exposing the film to light?
 CA True
 WA False
 ELDNR
 ELDNR
 T1
-What is the name of the video game consle curently made by Microsoft
-WA C Box One
-WA Mega Play 3
-CA X Box One
-WA PlayStation 7
+What does "SLR" stand for?
+WA Should Lower Red-eye
+WA Simple Light Retina
+CA Single-Lens Reflex
+WA Super Long Range
+T1
+Just like on a computer screen, digital cameras represent an image with tiny dots called _____?
+WA Digits
+CA Pixels
+WA Flecks
+WA Rasters
+T1
+A digital camera has a sensor instead of film. The sensor is most similar to which of the following technologies?
+WA Battery
+WA Light bulb
+CA Solar cell
+WA Thermostat
+T1
+Early cameras recorded images on plates. What company first developed photographic film?
+WA Fujifilm
+CA Kodak
+WA Polaroid
+WA Apple
 END QUIZ
