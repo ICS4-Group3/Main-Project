@@ -77,9 +77,9 @@ private Scanner Scanner1;
         catch(Exception e){
             System.out.println("File not found 2");
         }
-        System.out.println(Question1Line);
+        
         String readLine = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line-1);
-        System.out.println("The currect qread line is" + readLine);
+        
         String endTest = Files.readAllLines(Paths.get(System.getProperty("user.dir")+FileName1)).get(Question1Line-1);
         if (endTest.equals("END QUIZ")){
             EndTestB = true;
@@ -111,19 +111,19 @@ private Scanner Scanner1;
             String check4 = answerOption4.substring(0, 2);
             if (check1.equals("CA")){
                 correctAnswerMulti1 = 1;
-                System.out.println("Chekc1");
+                
             }
             else if (check2.equals("CA")){
                 correctAnswerMulti1 = 2;
-                System.out.println("Chekc2");
+                
             }
             else if (check3.equals("CA")){
                 correctAnswerMulti1 = 3;
-                System.out.println("Chekc3");
+                
             }
             else if (check4.equals("CA")) {
                 correctAnswerMulti1 = 4;
-                System.out.println("Chekc1");
+                
             }
             
             
@@ -683,6 +683,10 @@ private Scanner Scanner1;
 
         QuizPanelM8.setBackground(new java.awt.Color(255, 255, 255));
         QuizPanelM8.setPreferredSize(new java.awt.Dimension(292, 292));
+
+        QuizIconM8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizIconM8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizIconType7.png"))); // NOI18N
+        QuizIconM8.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         QuizStartM8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         QuizStartM8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizStartDef.png"))); // NOI18N
@@ -1456,6 +1460,30 @@ private Scanner Scanner1;
 //Changes label to imagehovered
     ImageIcon IIreg = new ImageIcon(getClass().getResource("/Images/QuizStartHov.png"));
     QuizStartM8.setIcon(IIreg);
+//Switches to quiz panel
+    MainMenuPanel.setVisible(false);
+    StartMenuPanel.setVisible(false);
+    QuizPanelMain.setVisible(true);
+    MakeQuizMain.setVisible(false);
+
+//Sets quiz name in quiz panel
+    correctAnswerMulti1 = 0;
+    correctAnswers = 0;    
+    QuizNameLabel.setText(QuizName1);
+    Question1Line = 3;
+    EndTestB = false;
+    FileName1 = "/src/Files/QuizText8.txt";
+    try {
+        readTittleV1();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    try {
+        //Prepares Question 1
+        readQuestion1M();
+    } catch (IOException ex) {
+        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
     }//GEN-LAST:event_QuizStartM8MouseReleased
 
     private void ExitQuizButMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitQuizButMouseEntered
@@ -1751,10 +1779,8 @@ private Scanner Scanner1;
     
     if (AnswerMulti1 == correctAnswerMulti1){
         correctAnswers = correctAnswers + 1;
-        System.out.println("Currect Correct answer was" + correctAnswerMulti1);
-        System.out.println("Currect Correct answers is" + correctAnswers);
     }
-    System.out.println("Currect Correct answer was" + correctAnswerMulti1);
+    
     AnswerMulti1=10;
     
     
@@ -1941,7 +1967,7 @@ private Scanner Scanner1;
         }
         }
         if (QuestionType == 2){
-            System.out.println("Enetered type 2");
+            
             ImageIcon TCreg = new ImageIcon(getClass().getResource("/Images/TrueButCA.png"));
             ImageIcon TWreg = new ImageIcon(getClass().getResource("/Images/TrueButWA.png"));
             ImageIcon FCreg = new ImageIcon(getClass().getResource("/Images/FalseeButCA.png"));

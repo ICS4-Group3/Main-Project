@@ -1,0 +1,51 @@
+Science General Quiz
+C7
+T2
+The earth rotates the sun?
+WA True
+CA False
+ELDNR
+ELDNR
+T2
+The center of the earth is hot?
+CA True
+WA False
+ELDNR
+ELDNR
+T2
+The continents on which we live have been moving their locations for millions of years.
+CA True
+WA False
+ELDNR
+ELDNR
+T1
+How much time do you think it would take for the earth to take one revolution around the sun?
+WA A month
+WA A day
+WA A decade
+CA A year
+T2
+All radioactivity is man-made?
+WA True
+CA False
+ELDNR
+ELDNR
+T2
+Electrons are smaller than atoms?
+CA True
+WA False
+ELDNR
+ELDNR
+T2
+It is the father’s gene that decides whether the baby is a boy or a girl?
+CA True
+WA False
+ELDNR
+ELDNR
+T2
+Human beings, as we know them today, developed from earlier species of animals?
+CA True
+WA Fales
+ELDNR
+ELDNR
+END QUIZ
