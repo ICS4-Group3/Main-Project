@@ -311,6 +311,7 @@ private Scanner Scanner1;
 
         StartMenuPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        StartBut.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         StartBut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/StartButHov2.png"))); // NOI18N
         StartBut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -326,7 +327,7 @@ private Scanner Scanner1;
                 StartButMouseReleased(evt);
             }
         });
-        StartMenuPanel.add(StartBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(562, 580, 300, 100));
+        StartMenuPanel.add(StartBut, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 580, 1420, 100));
 
         MainMenuBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MenuBackground1.png"))); // NOI18N
 
@@ -343,8 +344,10 @@ private Scanner Scanner1;
 
         StartMenuPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 40));
 
-        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Quizm.png"))); // NOI18N
-        StartMenuPanel.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 240, -1, -1));
+        Logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Quizm_1.png"))); // NOI18N
+        Logo.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        StartMenuPanel.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, 240, 1420, 310));
 
         MainBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MainBackground_1.png"))); // NOI18N
         StartMenuPanel.add(MainBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 850));
@@ -685,7 +688,7 @@ private Scanner Scanner1;
         QuizPanelM8.setPreferredSize(new java.awt.Dimension(292, 292));
 
         QuizIconM8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        QuizIconM8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizIconType7.png"))); // NOI18N
+        QuizIconM8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QuizIconType7_1.png"))); // NOI18N
         QuizIconM8.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         QuizStartM8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
